@@ -1,0 +1,24 @@
+.list {
+    list-style: none;
+
+    // >li {}
+
+    &.list-bulleted,
+    &.list-numbered {
+        list-style: inherit;
+
+        >li {
+            margin-left: 20px;
+        }
+    }
+
+    &.list-numbered {
+        list-style: decimal;
+    }
+
+    &.list-inline {
+        >li {
+            display: inline;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@use "./abstracts/variables";
+@use "./base/reset";
+
+@use "./vendors/bootstrap_grid.scss";
+
+@use "./base/typography";
+
+// layout
+@use "./layout/display";
+@use "./layout/flex";
+@use "./layout/lists";
+@use "./layout/margin";
+@use "./layout/padding";
+@use "./layout/radius";
+@use "./layout/sizing";
+
+
+@use "./components/buttons";
+@use "./components/colors";
+@use "./components/controls";
+@use "./components/inputs";
+@use "./components/labels";
+
+@use "./sections/landing/home.scss";
+@use "./sections/landing/canvas.scss";
+@use "./sections/landing/gallery.scss";
+@use "./sections/landing/splash-01.scss";
+@use "./sections/landing/splash-02.scss";
+@use "./sections/landing/SITU.scss";
+@use "./sections/landing/contact.scss";
+
+
+body,
+html {
+	background-color: #F2F2F2;
+}
+
+section {
+	background: #E4E4E4;
+	background: linear-gradient(180deg, rgba(228, 228, 228, 1) 0%, rgba(218, 218, 218, 1) 100%);
+	box-shadow: 0px 5px 5px rgba(158,158,158,0.1) inset;
+}

@@ -1,0 +1,13 @@
+.form-control {
+    display: block;
+    width: 100%;
+    border: unset;
+    outline: unset;
+    background-color: #D8D8D8;
+    box-shadow: unset;
+    -webkit-box-shadow: 0 0 0px 1000px #D8D8D8 inset;
+    padding: 10px 5px;
+    &::placeholder {
+        color: #262626;
+    }
+}

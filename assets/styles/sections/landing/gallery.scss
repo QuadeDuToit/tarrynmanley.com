@@ -1,0 +1,59 @@
+#gallery {
+
+	h2 {
+		margin: 60px 0;
+	}
+
+	.gallery-card {
+
+		padding: 0 25px 0 25px;
+
+		p {
+			font-size: 16px;
+		}
+
+		.title {
+			font-size: 22px;
+			letter-spacing: 0.094em;
+			padding: 25px 0;
+		}
+
+		.img {
+			background-image: url('https://placehold.co/320x230/000000/FFF');
+			height: 220px;
+			background-position: center;
+			background-size: cover;
+		}
+
+		hr {
+			margin: 10px 0;
+		}
+
+	}
+
+	.section-portrait {
+		margin-top: 60px;
+		padding-bottom: 20px;
+
+		.portrait-lg {
+			background-image: url('https://placehold.co/540x600/000000/FFF');
+			background-position: center;
+			background-size: cover;
+			height: 600px;
+			margin: 0 0 0 10px;
+		}
+
+		.portrait {
+			background-image: url('https://placehold.co/280x390/000000/FFF');
+			background-position: center;
+			background-size: cover;
+			height: 390px;
+			margin-top: 20px;
+			
+		}
+		.title{
+			padding: 20px 0 0 0;
+
+			}
+	}
+}

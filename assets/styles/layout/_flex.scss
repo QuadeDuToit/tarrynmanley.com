@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+
+.flex {
+    display: flex;
+    &.flex-inline {
+        display: inline-flex;
+        &>* {
+            align-items: stretch;
+        }
+    }
+    &.flex-wrap {
+        flex-wrap: wrap;
+    }
+    &.flex-col {
+        flex-direction: column;
+    }
+    &.flex-y {
+        align-items: center;
+    }
+    &.flex-y-end {
+        align-items: flex-end;
+    }
+    &.flex-x {
+        justify-content: center;
+    }
+    &.flex-x-end {
+        justify-content: flex-end;
+    }
+    &.flex-center {
+        @extend .flex-x;
+        @extend .flex-y;
+    }
+    &.flex-stretch>* {
+        flex-grow: 10;
+    }
+    &.flex-reverse {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    @media (max-width: $screen-size-xs) {
+        &.flex-collapse {
+            &.flex-screen-xs {
+                display: flow-root;
+            }
+        }
+    }
+}
+
+.flex-no-grow {
+    flex-grow: 0;
+}
+
+.flex-no-shrink {
+    flex-shrink: 0;
+}

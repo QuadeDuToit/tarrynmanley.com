@@ -1,0 +1,95 @@
+@use 'sass:math';
+// variables for modal
+$modalPaddingTop: 30px;
+$modalPaddingRight: 45px;
+$modalPaddingBottom: 55px;
+$modalPaddingLeft: 45px;
+
+//
+.modal-holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    .modal {
+        @extend .flex;
+        @extend .flex-x;
+        z-index: 600;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+
+        .modal-content {
+            @extend .flex;
+            @extend .flex-col;
+            // height: 80%;
+            margin-bottom: auto;
+            top: 10%;
+            max-height: 80%;
+            background-color: #ffffff;
+            max-width: 1025px;
+            width: 100%;
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding-top: $modalPaddingTop;
+            padding-right: $modalPaddingRight;
+            padding-bottom: $modalPaddingBottom;
+            padding-left: $modalPaddingLeft;
+            position: relative;
+
+            .modal-header {}
+
+            .modal-body {
+                @extend .h-100;
+                overflow: hidden;
+                // overflow-y: scroll;
+                // overflow-x: hidden;
+            }
+
+            .modal-footer {
+                padding-top: 40px;
+            }
+
+
+
+            span.close {
+                @extend .flex;
+                @extend .flex-center;
+                position: absolute;
+                top: $modalPaddingTop;
+                right: math.div($modalPaddingRight, 1.5); // $modalPaddingRight / 1.5;
+                color: $clr-dark;
+                transition: transform 300ms, color 300ms;
+                height: 24px;
+                width: 24px;
+                cursor: pointer;
+                font-size: 24px;
+                line-height: 24px;
+
+                &:hover {
+                    color: $clr-danger;
+                    transform: rotate(90deg);
+                    transform-origin: center center;
+                }
+            }
+
+
+
+            &.sm {
+                width: 550px;
+            }
+
+            &.lg {
+                width: 90%;
+            }
+        }
+    }
+}

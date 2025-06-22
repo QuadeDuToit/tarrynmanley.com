@@ -1,0 +1,51 @@
+#contact {
+	padding: 15px;
+
+	h2 {
+		font-size: 60px;
+		padding: 45px 0 0 30px;
+	}
+
+	.img-bg {
+		position: relative;
+		background-image: url('https://placehold.co/345x590/000000/FFF');
+		background-position: center;
+		background-size: cover;
+		height: 590px;
+		width: 345px;
+		margin-left: auto;
+	}
+
+	.img-splash {
+		position: absolute;
+		background-image: url('https://placehold.co/305x465/555555/777');
+		background-position: center;
+		background-size: cover;
+		height: 465px;
+		width: 305px;
+		margin-left: auto;
+		margin-top: 70px;
+		right: 280px;
+	}
+
+	.contact-details {
+		margin-left: 30px;
+		position: absolute;
+		margin-top: auto;
+		bottom: 0;
+
+		h4 {
+			font-size: 22px;
+			margin-bottom: 5px;
+			;
+		}
+
+		ul {
+			margin-bottom: 30px;
+		}
+
+		li {}
+	}
+
+
+}

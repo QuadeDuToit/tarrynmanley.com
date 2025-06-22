@@ -1,0 +1,72 @@
+$iconMoonUrl: "/assets/icons/icomoon/fonts/";
+@font-face {
+    font-family: 'icomoon';
+    src: url($iconMoonUrl + 'icomoon.eot?j7yq3');
+    src: url($iconMoonUrl + 'icomoon.eot?j7yq3#iefix') format('embedded-opentype'), url($iconMoonUrl + 'icomoon.ttf?j7yq3') format('truetype'), url($iconMoonUrl + 'icomoon.woff?j7yq3') format('woff'), url($iconMoonUrl + 'icomoon.svg?j7yq3#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.icon,
+.icon::before,
+.icon::after,
+[class^="icon-"],
+[class*=" icon-"],
+[class^="icon-"]:before,
+[class*=" icon-"]:before,
+[class^="icon-"]:after,
+[class*=" icon-"]:after {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+}
+
+.icon.icon-sm {
+    &,
+    &::before,
+    &::after {
+        font-size: 15px;
+    }
+}
+
+.icon-link:before {
+    content: "\e909";
+  }
+  .icon-github:before {
+    content: "\e908";
+  }
+  .icon-close:before {
+    content: "\e901";
+  }
+  .icon-camera:before {
+    content: "\e907";
+  }
+  .icon-facebook:before {
+    content: "\e906";
+  }
+  .icon-camp:before {
+    content: "\e904";
+  }
+  .icon-hike:before {
+    content: "\e905";
+  }
+  .icon-compass:before {
+    content: "\e903";
+  }
+  .icon-instagram:before {
+    content: "\e900";
+  }
+  .icon-gaming:before {
+    content: "\e902";
+  }
+  

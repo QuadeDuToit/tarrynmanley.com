@@ -1,0 +1,30 @@
+#SITU {
+	padding-bottom: 60px;
+	h2 {
+		font-size: 60px;
+		padding: 50px 0 30px 0;
+	}
+
+	#situ-bg {
+		background-image: url('https://placehold.co/700x450/000000/FFF');
+		background-position: center;
+		background-size: cover;
+		width: 700px;
+		height: 450px;
+		position: relative;
+	}
+
+	#situ {
+		background-image: url('https://placehold.co/180x200/9999999/000');
+		background-position: center;
+		background-size: cover;
+		width: 180px;
+		height: 200px;
+		position: absolute;
+		margin: auto;
+		left: 0;
+		right: 0;
+		top: 45px;
+
+	}
+}

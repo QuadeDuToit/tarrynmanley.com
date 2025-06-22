@@ -1,0 +1,124 @@
+// MEDIA QUIERY FIXED POINTS
+$screen-size-xs: 576px;
+$screen-size-sm: 576px;
+$screen-size-md: 768px;
+$screen-size-lg: 992px;
+$screen-size-xl: 1200px;
+// TYPOGRAPHY SIZES
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$font-size-md: 15px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-clr-primary: #454955;
+$font-clr-secondary: #414141;
+// CONTROL SIZES 
+$control-size-sm: 30px;
+$control-size-md: 50px;
+$control-size-lg: 60px;
+
+$btn-border-size: 2px;
+
+// CORE 
+$clr-border: #c9c9c9;
+// || THENE
+// DEFAULTS 
+$clr-default: #FFFFFF;
+$clr-extra_dark: #6E6E6E;
+$clr-dark: #6E6E6E;
+$clr-light: #DDDDDD;
+$clr-extra_light: #E4E5E6;
+// PRIMARY 
+$clr-primary: #FBFF00;
+$clr-primary-dark: #546D82;
+$clr-primary-light: #546D82;
+// SECONDARY 
+$clr-secondary: #EB1D36;
+$clr-secondary-dark: #bf2c3e;
+$clr-secondary-light: #bf2c3e;
+// SUCCESS
+$clr-success: #2ec18b;
+$clr-success-dark: #1a8960;
+$clr-success-light: #4bd5a2;
+// INFO
+$clr-info: #2991AC;
+$clr-info-dark: #2991AC;
+$clr-info-light: #2991AC;
+// WARNING
+$clr-warning: #ff6600;
+$clr-warning-dark: #ff6600;
+$clr-warning-light: #ff6600;
+// DANGER
+$clr-danger: #ad6565; // #ce7575;
+$clr-danger-dark: #D50108;
+$clr-danger-light: #ad6565;
+// ----
+// border colours
+$animation-speed: 300ms;
+
+$themes: ("extra-dark": (
+		"default": $clr-extra_dark,
+		"dark":$clr-secondary-dark,
+		"light":$clr-secondary-light
+	),
+	"dark":
+	(
+	"default": $clr-dark,
+	"dark":$clr-extra_dark,
+	"light":$clr-light
+	),
+	"light":
+	(
+		"default": $clr-light,
+		"dark":$clr-extra_light,
+		"light":$clr-extra_light
+	),
+	"extra-light":
+	(
+		"default": $clr-extra_light,
+		"dark":$clr-secondary-dark,
+		"light":$clr-secondary-light
+	),
+	"default":
+	(
+		"default": $clr-default,
+		"dark":$clr-dark,
+		"light":$clr-light
+	),
+	"primary":
+	(
+		"default": $clr-primary,
+		"dark":$clr-primary-dark,
+		"light":$clr-primary-light
+	),
+	"secondary":
+	(
+		"default": $clr-secondary,
+		"dark":$clr-secondary-dark,
+		"light":$clr-secondary-light
+	),
+	"success":
+	(
+		"default": $clr-success,
+		"dark":$clr-success-dark,
+		"light":$clr-success-light
+	),
+	"info":
+	(
+		"default": $clr-info,
+		"dark":$clr-info-dark,
+		"light":$clr-info-light
+	),
+	"warning":
+	(
+		"default": $clr-warning,
+		"dark":$clr-warning-dark,
+		"light":$clr-warning-light
+	),
+	"danger":
+	(
+		"default": $clr-danger,
+		"dark":$clr-danger-dark,
+		"light":$clr-danger-light
+	)
+);
