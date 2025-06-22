@@ -2688,6 +2688,9 @@ hr.header {
   }
 }
 @media (min-width: 992px) {
+  #splash-02 .col-rev {
+    flex-direction: unset;
+  }
   #splash-02 h2 {
     font-size: 50px;
     letter-spacing: 0.3em;
