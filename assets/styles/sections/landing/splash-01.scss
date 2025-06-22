@@ -1,15 +1,24 @@
-#splash-01
-{
+#splash-01 {
 	padding: 20px 30px;
+
 	h2 {
 		font-size: 60px;
 		letter-spacing: 0.12em;
 	}
+
 	.img-cloud {
-			background-image: url('https://placehold.co/530x590/000000/FFF');
-			background-position: center;
-			background-size: cover;
-			height: 580px;
-			
+		background-image: url('https://placehold.co/530x590/000000/FFF');
+		background-position: center;
+		background-size: cover;
+		height: 580px;
+
+	}
+
+	@media (min-width: 992px) {
+
+		h2 {
+			font-size: 54px;
+
+		}
 	}
 }

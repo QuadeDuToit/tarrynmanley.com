@@ -13,4 +13,52 @@
 		// letter-spacing: 0.24em;
 
 	}
+
+
+	@media (min-width: 576px) {
+		padding: 25px;
+		.col-sm-show {
+			display: unset;
+		}
+
+		.col-sm-hide {
+			display: none;
+		}
+
+		p {
+			text-align: center;
+			padding: 0;
+		}
+		.img-video {
+			margin-left: 0px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.col-img-video {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.img-video {
+			transform: scale(0.8);
+		}
+
+		.col-sm-show {
+			display: none;
+		}
+
+		.col-sm-hide {
+			display: unset;
+		}
+
+		p {
+			padding-right: 70px;
+		}
+	}
+
+	@media (min-width: 1200px) {}
+
 }

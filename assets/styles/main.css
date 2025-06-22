@@ -869,14 +869,19 @@ h4 {
   font-weight: 900;
   src: url("../../assets/fonts/GlacialIndifference/GlacialIndifference-Bold.otf") format("truetype");
 }
-.thin {
-  font-weight: 100;
+@media (min-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 52px;
+  }
 }
-
-.letter-spacing {
-  letter-spacing: 5px;
+@media (min-width: 992px) {
+  h2 {
+    font-size: 62px;
+  }
 }
-
 .z-index-5 {
   z-index: 5;
 }
@@ -1097,6 +1102,26 @@ hr.header {
   height: 100svh;
 }
 
+@media (min-width: 576px) {
+  .hide-lg {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .hide-lg {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .hide-lg {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .hide-lg {
+    display: unset;
+  }
+}
 .flex, .btn.btn__block {
   display: flex;
 }
@@ -2492,7 +2517,7 @@ hr.header {
 }
 
 #home-banner {
-  background: url("../../assets/images/header-splash.jpg");
+  background: url("../../assets/images/header-splash.webp");
   height: 625px;
   background-position: center;
   background-size: cover;
@@ -2513,6 +2538,14 @@ hr.header {
 #home-banner .mt-c-lg {
   margin-top: 165px;
 }
+@media (min-width: 768px) {
+  #home-banner .mt-c-lg {
+    margin-top: 65px;
+  }
+  #home-banner p {
+    text-align: center !important;
+  }
+}
 
 #my-canvas {
   padding: 25px 0 60px 60px;
@@ -2522,6 +2555,44 @@ hr.header {
   height: 540px;
   background-image: url("https://placehold.co/420x540/000000/FFF");
   margin-left: -40px;
+}
+@media (min-width: 576px) {
+  #my-canvas {
+    padding: 25px;
+  }
+  #my-canvas .col-sm-show {
+    display: unset;
+  }
+  #my-canvas .col-sm-hide {
+    display: none;
+  }
+  #my-canvas p {
+    text-align: center;
+    padding: 0;
+  }
+  #my-canvas .img-video {
+    margin-left: 0px;
+  }
+}
+@media (min-width: 768px) {
+  #my-canvas .col-img-video {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 992px) {
+  #my-canvas .img-video {
+    transform: scale(0.8);
+  }
+  #my-canvas .col-sm-show {
+    display: none;
+  }
+  #my-canvas .col-sm-hide {
+    display: unset;
+  }
+  #my-canvas p {
+    padding-right: 70px;
+  }
 }
 #gallery h2 {
   margin: 60px 0;
@@ -2581,6 +2652,11 @@ hr.header {
   background-size: cover;
   height: 580px;
 }
+@media (min-width: 992px) {
+  #splash-01 h2 {
+    font-size: 54px;
+  }
+}
 
 #splash-02 {
   padding: 20px 30px 20px 40px;
@@ -2596,6 +2672,7 @@ hr.header {
   background-position: center;
   background-size: cover;
   height: 580px;
+  min-height: 580px;
 }
 #splash-02 h4 {
   font-size: 21px;
@@ -2604,6 +2681,17 @@ hr.header {
 #splash-02 p {
   font-size: 16px;
   margin-bottom: 35px;
+}
+@media (min-width: 576px) {
+  #splash-02 .col-rev {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 992px) {
+  #splash-02 h2 {
+    font-size: 50px;
+    letter-spacing: 0.3em;
+  }
 }
 
 #SITU {

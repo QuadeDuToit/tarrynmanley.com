@@ -1,12 +1,12 @@
 #home-banner {
-	background: url('../../assets/images/header-splash.jpg');
+	background: url('../../assets/images/header-splash.webp');
 	height: 625px;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 15px;
 
-	h1 { 
+	h1 {
 		margin-top: 120px;
 	}
 
@@ -23,5 +23,18 @@
 	.mt-c-lg {
 		margin-top: 165px;
 	}
+
+
+	@media (min-width: 576px) {}
+
+	@media (min-width: 768px) {
+	.mt-c-lg {
+		margin-top: 65px;
+	}
+	p { 
+		text-align: center !important;
+	}
+	}
+ 
 
 }

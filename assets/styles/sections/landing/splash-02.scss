@@ -1,27 +1,43 @@
-#splash-02
-{
-	padding: 20px 30px 20px 40px ;
+#splash-02 {
+	padding: 20px 30px 20px 40px;
+
 	h2 {
 		font-size: 60px;
 		letter-spacing: 0.3em;
 		margin-bottom: 40px;
 		padding-top: 120px;
 	}
+
 	.img-cloud {
-			background-image: url('https://placehold.co/530x590/000000/FFF');
-			background-position: center;
-			background-size: cover;
-			height: 580px;
-			
+		background-image: url('https://placehold.co/530x590/000000/FFF');
+		background-position: center;
+		background-size: cover;
+		height: 580px;
+		min-height: 580px;
+
 	}
-	h4
-	{
+
+	h4 {
 		font-size: 21px;
 		margin-bottom: 25px;
 	}
-	p
-	{
+
+	p {
 		font-size: 16px;
 		margin-bottom: 35px;
 	}
+@media (min-width: 576px) {
+ .col-rev {
+flex-direction: column-reverse;
+}
+}
+
+	@media (min-width: 992px) {
+
+		h2 {
+			font-size: 50px;
+			letter-spacing: 0.3em;
+		}
+	}
+
 }
