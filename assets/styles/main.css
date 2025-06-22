@@ -2741,7 +2741,7 @@ hr.header {
   height: 580px;
   min-height: 580px;
 }
-#splash-02 h4 {
+#splash-02 h3 {
   font-size: 21px;
   margin-bottom: 25px;
 }
@@ -2827,7 +2827,7 @@ hr.header {
   margin-top: auto;
   bottom: 0;
 }
-#contact .contact-details h5 {
+#contact .contact-details h3 {
   font-size: 22px;
   margin-bottom: 5px;
 }
