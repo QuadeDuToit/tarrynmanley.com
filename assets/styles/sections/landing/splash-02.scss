@@ -34,9 +34,10 @@
 	}
 
 	@media (min-width: 992px) {
-.col-rev { 
-	flex-direction:unset;
-}
+		.col-rev {
+			flex-direction: unset;
+		}
+
 		h2 {
 			font-size: 50px;
 			letter-spacing: 0.3em;

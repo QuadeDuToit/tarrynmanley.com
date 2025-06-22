@@ -785,11 +785,11 @@ p {
 }
 
 .font-size-xs, .label, .font-size-xs::before, .label::before, .font-size-xs::after, .label::after {
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .font-size-sm, .font-size-sm::before, .font-size-sm::after {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .font-size-md, .btn, .font-size-md::before, .btn::before, .font-size-md::after, .btn::after {
@@ -1122,42 +1122,42 @@ hr.header {
     display: unset;
   }
 }
-.flex, .btn.btn__block {
+.flex, .modal-holder .modal, .modal-holder .modal .modal-content, .modal-holder .modal .modal-content span.close, .btn.btn__block {
   display: flex;
 }
-.flex.flex-inline, .flex-inline.btn.btn__block {
+.flex.flex-inline, .modal-holder .flex-inline.modal, .modal-holder .modal .flex-inline.modal-content, .modal-holder .modal .modal-content span.flex-inline.close, .flex-inline.btn.btn__block {
   display: inline-flex;
 }
-.flex.flex-inline > *, .flex-inline.btn.btn__block > * {
+.flex.flex-inline > *, .modal-holder .flex-inline.modal > *, .modal-holder .modal .flex-inline.modal-content > *, .modal-holder .modal .modal-content span.flex-inline.close > *, .flex-inline.btn.btn__block > * {
   align-items: stretch;
 }
-.flex.flex-wrap, .flex-wrap.btn.btn__block {
+.flex.flex-wrap, .modal-holder .flex-wrap.modal, .modal-holder .modal .flex-wrap.modal-content, .modal-holder .modal .modal-content span.flex-wrap.close, .flex-wrap.btn.btn__block {
   flex-wrap: wrap;
 }
-.flex.flex-col, .flex-col.btn.btn__block {
+.flex.flex-col, .modal-holder .flex-col.modal, .modal-holder .modal .modal-content span.flex-col.close, .flex-col.btn.btn__block, .modal-holder .modal .modal-content, .modal-holder .modal .modal-content span.close.modal-content {
   flex-direction: column;
 }
-.flex.flex-y, .flex.flex-center, .btn.btn__block {
+.flex.flex-y, .modal-holder .flex-y.modal, .modal-holder .modal .flex-y.modal-content, .flex.flex-center, .modal-holder .flex-center.modal, .modal-holder .modal .flex-center.modal-content, .modal-holder .modal .modal-content span.close, .modal-holder .modal .modal-content.btn.btn__block, .btn.btn__block {
   align-items: center;
 }
-.flex.flex-y-end, .flex-y-end.btn.btn__block {
+.flex.flex-y-end, .modal-holder .flex-y-end.modal, .modal-holder .modal .flex-y-end.modal-content, .modal-holder .modal .modal-content span.flex-y-end.close, .flex-y-end.btn.btn__block {
   align-items: flex-end;
 }
-.flex.flex-x, .flex.flex-center, .btn.btn__block {
+.flex.flex-x, .modal-holder .modal .flex-x.modal-content, .modal-holder .modal, .modal-holder .modal .modal-content.modal, .flex.flex-center, .modal-holder .modal .flex-center.modal-content, .modal-holder .modal .modal-content span.close, .modal-holder .modal .modal-content.btn.btn__block, .btn.btn__block {
   justify-content: center;
 }
-.flex.flex-x-end, .flex-x-end.btn.btn__block {
+.flex.flex-x-end, .modal-holder .flex-x-end.modal, .modal-holder .modal .flex-x-end.modal-content, .modal-holder .modal .modal-content span.flex-x-end.close, .flex-x-end.btn.btn__block {
   justify-content: flex-end;
 }
-.flex.flex-stretch > *, .flex-stretch.btn.btn__block > * {
+.flex.flex-stretch > *, .modal-holder .flex-stretch.modal > *, .modal-holder .modal .flex-stretch.modal-content > *, .modal-holder .modal .modal-content span.flex-stretch.close > *, .flex-stretch.btn.btn__block > * {
   flex-grow: 10;
 }
-.flex.flex-reverse, .flex-reverse.btn.btn__block {
+.flex.flex-reverse, .modal-holder .flex-reverse.modal, .modal-holder .modal .flex-reverse.modal-content, .modal-holder .modal .modal-content span.flex-reverse.close, .flex-reverse.btn.btn__block {
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
 @media (max-width: 576px) {
-  .flex.flex-collapse.flex-screen-xs, .flex-collapse.flex-screen-xs.btn.btn__block {
+  .flex.flex-collapse.flex-screen-xs, .modal-holder .flex-collapse.flex-screen-xs.modal, .modal-holder .modal .flex-collapse.flex-screen-xs.modal-content, .modal-holder .modal .modal-content span.flex-collapse.flex-screen-xs.close, .flex-collapse.flex-screen-xs.btn.btn__block {
     display: flow-root;
   }
 }
@@ -1647,7 +1647,7 @@ hr.header {
   height: 75%;
 }
 
-.h-100, .pg {
+.h-100, .modal-holder .modal .modal-content .modal-body, .pg {
   height: 100%;
 }
 
@@ -2507,6 +2507,73 @@ hr.header {
   color: #262626;
 }
 
+.modal-holder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.modal-holder.hidden {
+  display: none;
+}
+.modal-holder .modal {
+  z-index: 600;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-holder .modal .modal-content {
+  margin-bottom: auto;
+  top: 10%;
+  max-height: 80%;
+  background-color: #ffffff;
+  max-width: 1025px;
+  width: 100%;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-right: 45px;
+  padding-bottom: 55px;
+  padding-left: 45px;
+  position: relative;
+}
+.modal-holder .modal .modal-content .modal-body {
+  overflow: hidden;
+}
+.modal-holder .modal .modal-content .modal-footer {
+  padding-top: 40px;
+}
+.modal-holder .modal .modal-content span.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #6E6E6E;
+  transition: transform 300ms, color 300ms;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 24px;
+}
+.modal-holder .modal .modal-content span.close:hover {
+  color: #ad6565;
+  transform: rotate(90deg);
+  transform-origin: center center;
+}
+.modal-holder .modal .modal-content.sm {
+  width: 550px;
+}
+.modal-holder .modal .modal-content.lg {
+  width: 90%;
+}
+
 .label {
   color: #FFFFFF;
   padding: 0 4px;
@@ -2705,7 +2772,7 @@ hr.header {
   padding: 50px 0 30px 0;
 }
 #SITU #situ-bg {
-  background-image: url("https://placehold.co/700x450/000000/FFF");
+  background-image: url("../../assets/images/situ-bg.webp");
   background-position: center;
   background-size: cover;
   width: 700px;
@@ -2717,12 +2784,14 @@ hr.header {
   background-position: center;
   background-size: cover;
   width: 180px;
-  height: 200px;
+  height: auto;
+  min-height: 200px;
   position: absolute;
   margin: auto;
   left: 0;
   right: 0;
   top: 45px;
+  cursor: pointer;
 }
 
 #contact {

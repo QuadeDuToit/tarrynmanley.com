@@ -4,6 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <meta name="description" content="Author: QK du Toit">
+	 <meta name="robots" content="index,follow">
 	<title>Tarryn Manley</title>
 
 	<link rel="stylesheet" href="assets/styles/main.css">
@@ -66,10 +68,12 @@
 					</div>
 				</div>
 				<p class="mt-30">
-					While I'm practiced in different<br class="hide-lg" />mediums, I found a deep connection<br class="hide-lg" />to large bold abstract
+					While I'm practiced in different<br class="hide-lg" />mediums, I found a deep connection<br
+						class="hide-lg" />to large bold abstract
 					paintings. I<br class="hide-lg" />
 					love
-					how they communicate so much<br class="hide-lg" />of the creator to the audience while<br class="hide-lg" />ironically taking on new
+					how they communicate so much<br class="hide-lg" />of the creator to the audience while<br
+						class="hide-lg" />ironically taking on new
 					meaning
 					for<br class="hide-lg" />
 					every
@@ -323,7 +327,21 @@
 		</div>
 	</section>
 
+	<div id="mdl-situ" class="modal-holder hidden">
+		<div class="modal">
+			<div class="modal-content">
+				<div class="modal-body ">
+					<ul id="situ-list">
+						<li onclick="SituInstance.load('coastal')" data-id="coastal">coastal</li>
+						<li onclick="SituInstance.load('crow-salad')" data-id="crow-salad">crow-salad</li>
+						<li onclick="SituInstance.load('inferno')" data-id="inferno">inferno</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<script src="./assets/js/main.js"></script>
 </body>
 
 </html>

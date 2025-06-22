@@ -6,7 +6,7 @@
 	}
 
 	#situ-bg {
-		background-image: url('https://placehold.co/700x450/000000/FFF');
+		background-image: url('../../assets/images/situ-bg.webp');
 		background-position: center;
 		background-size: cover;
 		width: 700px;
@@ -19,12 +19,13 @@
 		background-position: center;
 		background-size: cover;
 		width: 180px;
-		height: 200px;
+		height: auto;
+		min-height: 200px;
 		position: absolute;
 		margin: auto;
 		left: 0;
 		right: 0;
 		top: 45px;
-
+		cursor: pointer;
 	}
 }

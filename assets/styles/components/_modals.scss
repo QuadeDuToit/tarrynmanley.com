@@ -1,16 +1,22 @@
 @use 'sass:math';
+@use "../abstracts//variables" as *;
+@use "../layout/flex";
+@use "../layout/sizing";
 // variables for modal
 $modalPaddingTop: 30px;
 $modalPaddingRight: 45px;
 $modalPaddingBottom: 55px;
 $modalPaddingLeft: 45px;
 
-//
 .modal-holder {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
+
+    &.hidden {
+        display: none;
+    }
 
     .modal {
         @extend .flex;
@@ -80,8 +86,6 @@ $modalPaddingLeft: 45px;
                     transform-origin: center center;
                 }
             }
-
-
 
             &.sm {
                 width: 550px;
