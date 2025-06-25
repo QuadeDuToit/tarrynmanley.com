@@ -18,8 +18,7 @@
 			padding: 25px 0;
 		}
 
-		.img {
-			background-image: url('https://placehold.co/320x230/000000/FFF');
+		.img img {
 			height: 220px;
 			background-position: center;
 			background-size: cover;
@@ -36,7 +35,6 @@
 		padding-bottom: 20px;
 
 		.portrait-lg {
-			background-image: url('https://placehold.co/540x600/000000/FFF');
 			background-position: center;
 			background-size: cover;
 			height: 600px;
@@ -44,7 +42,6 @@
 		}
 
 		.portrait {
-			background-image: url('https://placehold.co/280x390/000000/FFF');
 			background-position: center;
 			background-size: cover;
 			height: 390px;

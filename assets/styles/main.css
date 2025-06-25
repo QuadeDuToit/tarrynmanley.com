@@ -2675,8 +2675,7 @@ hr.header {
   letter-spacing: 0.094em;
   padding: 25px 0;
 }
-#gallery .gallery-card .img {
-  background-image: url("https://placehold.co/320x230/000000/FFF");
+#gallery .gallery-card .img img {
   height: 220px;
   background-position: center;
   background-size: cover;
@@ -2689,14 +2688,12 @@ hr.header {
   padding-bottom: 20px;
 }
 #gallery .section-portrait .portrait-lg {
-  background-image: url("https://placehold.co/540x600/000000/FFF");
   background-position: center;
   background-size: cover;
   height: 600px;
   margin: 0 0 0 10px;
 }
 #gallery .section-portrait .portrait {
-  background-image: url("https://placehold.co/280x390/000000/FFF");
   background-position: center;
   background-size: cover;
   height: 390px;
@@ -2713,8 +2710,7 @@ hr.header {
   font-size: 60px;
   letter-spacing: 0.12em;
 }
-#splash-01 .img-cloud {
-  background-image: url("https://placehold.co/530x590/000000/FFF");
+#splash-01 .img-cloud img {
   background-position: center;
   background-size: cover;
   height: 580px;
@@ -2735,7 +2731,6 @@ hr.header {
   padding-top: 120px;
 }
 #splash-02 .img-cloud {
-  background-image: url("https://placehold.co/530x590/000000/FFF");
   background-position: center;
   background-size: cover;
   height: 580px;
@@ -2780,12 +2775,13 @@ hr.header {
   position: relative;
 }
 #SITU #situ {
-  background-image: url("https://placehold.co/180x200/9999999/000");
-  background-position: center;
+  object-position: center;
   background-size: cover;
   width: 180px;
   height: auto;
   min-height: 200px;
+  max-height: 240px;
+  overflow: hidden;
   position: absolute;
   margin: auto;
   left: 0;

@@ -18,11 +18,10 @@ class Situ {
 
 	load(item) {
 		console.log("load item: ", item)
-		this.elSitu.style.backgroundImage = `url('../../assets/images/situ/${item}.webp')`;
+		this.elSitu.src = `/assets/images/situ/${item}.webp`;
 	}
 }
 
-// Example usage:
 document.addEventListener('DOMContentLoaded', () => {
 	window.SituInstance = new Situ();
 });

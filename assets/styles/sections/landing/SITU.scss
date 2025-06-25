@@ -15,12 +15,13 @@
 	}
 
 	#situ {
-		background-image: url('https://placehold.co/180x200/9999999/000');
-		background-position: center;
+		object-position: center;
 		background-size: cover;
 		width: 180px;
 		height: auto;
 		min-height: 200px;
+		max-height: 240px;
+		overflow: hidden;
 		position: absolute;
 		margin: auto;
 		left: 0;
