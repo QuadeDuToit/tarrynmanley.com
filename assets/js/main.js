@@ -18,7 +18,7 @@ class Situ {
 
 	load(item) {
 		console.log("load item: ", item)
-		this.elSitu.src = `/assets/images/situ/${item}.webp`;
+		this.elSitu.src = `./assets/images/situ/${item}.webp`;
 	}
 }
 
