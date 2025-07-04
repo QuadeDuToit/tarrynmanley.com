@@ -7,6 +7,7 @@
 	.gallery-card {
 
 		padding: 0 25px 0 25px;
+		margin-bottom: 60px;
 
 		p {
 			font-size: 16px;
@@ -16,6 +17,7 @@
 			font-size: 22px;
 			letter-spacing: 0.094em;
 			padding: 25px 0;
+			text-transform: uppercase;
 		}
 
 		.img img {
@@ -31,7 +33,6 @@
 	}
 
 	.section-portrait {
-		margin-top: 60px;
 		padding-bottom: 20px;
 
 		.portrait-lg {
@@ -46,11 +47,12 @@
 			background-size: cover;
 			height: 390px;
 			margin-top: 20px;
-			
+
 		}
-		.title{
+
+		.title {
 			padding: 20px 0 0 0;
 
-			}
+		}
 	}
 }

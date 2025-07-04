@@ -2666,6 +2666,7 @@ hr.header {
 }
 #gallery .gallery-card {
   padding: 0 25px 0 25px;
+  margin-bottom: 60px;
 }
 #gallery .gallery-card p {
   font-size: 16px;
@@ -2674,6 +2675,7 @@ hr.header {
   font-size: 22px;
   letter-spacing: 0.094em;
   padding: 25px 0;
+  text-transform: uppercase;
 }
 #gallery .gallery-card .img img {
   height: 220px;
@@ -2684,7 +2686,6 @@ hr.header {
   margin: 10px 0;
 }
 #gallery .section-portrait {
-  margin-top: 60px;
   padding-bottom: 20px;
 }
 #gallery .section-portrait .portrait-lg {
