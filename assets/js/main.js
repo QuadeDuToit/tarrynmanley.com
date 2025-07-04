@@ -6,6 +6,7 @@ class Situ {
 		this.elSitu = document.getElementById('situ');
 		this.elSituMdl = document.getElementById('mdl-situ');
 		this.elGalleryFeatured = document.getElementById('galleryFeatured');
+		this.elGalleryAll = document.getElementById('galleryAll');
 
 		this.gallery = [];
 
@@ -45,6 +46,7 @@ class Situ {
 		if (featuredGalleyItems.length > 0) {
 			this.loadFeaturedGalleryItems();
 		}
+		this.loadAllGalleryItems();
 	}
 
 	async loadGallery() {
@@ -70,7 +72,9 @@ class Situ {
 		return this.gallery.filter(item => item.featured).slice(0, 3);
 	}
 
-		craftGalleryCard(item) {
+
+
+	craftGalleryCard(item) {
 		return `
     <div class="col-4 gallery-card">
       <div class="img">
@@ -89,10 +93,19 @@ class Situ {
 
 	loadFeaturedGalleryItems() {
 		const items = this.featuredGalleryItems().map(item => this.craftGalleryCard(item)).join('');
+		if(this.elGalleryFeatured) { 
 		this.elGalleryFeatured.innerHTML = items;
+		}
 	}
 
-
+	loadAllGalleryItems()
+	{
+		const items = this.gallery.map(item => this.craftGalleryCard(item)).join('');
+		if(this.elGalleryAll)
+		{
+this.elGalleryAll.innerHTML = items;
+		}
+	}
 
 
 	showSituSelection() {
