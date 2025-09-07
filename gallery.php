@@ -11,21 +11,12 @@ $canonical_url = 'https://tarrynmanley.com/gallery.php';
 
 <head>
 	<?php include 'includes/head.php'; ?>
-
-	<style>
-		html,
-		body {
-			width: 1200px;
-			margin: 0 auto;
-		}
-	</style>
 </head>
 
 <body>
 	<?php include 'includes/navigation.php'; ?>
 
 	<?php include 'includes/sections/gallery-full.php'; ?>
-
 
 	<?php include 'includes/sections/contact.php'; ?>
 
