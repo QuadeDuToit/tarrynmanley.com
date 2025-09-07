@@ -21,7 +21,7 @@
 </head>
 
 <body>
-	<section id="home-banner" class="container">
+	<section id="home-banner" class="container" fetchpriority="high">
 		<!-- home banner -->
 		<div class="row flex header">
 			<div class="col-8 offset-2 text-right">
@@ -35,7 +35,7 @@
 		</div>
 		<div class="row">
 			<div class="col-2 img-self-portait">
-				<img src="./assets/images/profile.webp" />
+				<img src="./assets/images/profile.webp" alt="Photo of Tarryn Manley" />
 			</div>
 			<div class="col-10 py-15 pr-30 pl-30">
 				<p class="mb-30">
@@ -119,13 +119,14 @@
 				<div class="img-video">
 					<video
 						class="lazy-video"
+						kind="A sped up video of Tarryn Manley painting"
 						width="420"
 						height="540"
 						muted
 						loop
 						playsinline
 						data-src="assets/videos/petal.mp4"
-						poster="assets/images/video-poster.webp">
+						poster="./assets/images/contact-lg.webp">
 						<source data-src="assets/videos/petal.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
@@ -207,12 +208,12 @@
 		<div class="row section-portrait">
 			<div class="col-6">
 				<div class="portrait-lg">
-					<img src="./assets/images/blue-lady-lg.webp" />
+					<img src="./assets/images/blue-lady-lg.webp" alt="Art piece: Blue Lady" />
 				</div>
 			</div>
 			<div class="col-4 offset-1 gallery-card">
 				<div class="portrait">
-					<img src="./assets/images/gallery/blue_lady.webp" />
+					<img src="./assets/images/gallery/blue_lady.webp" alt="Art piece: Blue Lady with details" />
 				</div>
 				<p class="title">BLUE LADY</p>
 				<hr />
@@ -245,7 +246,7 @@
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-12 img-cloud">
-				<img src="./assets/images/blurb-creative-feeds.webp" />
+				<img src="./assets/images/blurb-creative-feeds.webp" alt="Art piece: Creative Feeds" />
 			</div>
 		</div>
 	</section>
@@ -253,7 +254,7 @@
 	<section id="splash-02" class="container">
 		<div class="row col-rev">
 			<div class="col-lg-6 col-md-12 img-cloud">
-				<img src="./assets/images/blurb-comissions.webp" />
+				<img src="./assets/images/blurb-comissions.webp" alt="Art piece: Commissions" />
 			</div>
 			<div class="col-lg-6 col-md-12 flex flex-y ">
 				<div class="container-fluid">
@@ -291,7 +292,7 @@
 			<div class="col-12 flex flex-x">
 				<div id="situ-bg">
 					<div id="situ-wrapper">
-						<img src="./assets/images/situ/coastal.webp" id="situ" />
+						<img src="./assets/images/situ/coastal.webp" id="situ" alt="Art piece placed in SITU" />
 					</div>
 				</div>
 			</div>
@@ -322,8 +323,8 @@
 					</ul>
 				</div>
 				<div class="flex flex-y">
-					<img class="img-bg" src="./assets/images/contact-lg.webp" />
-					<img class="img-splash" src="./assets/images/contact-portrait.webp" />
+					<img class="img-bg" src="./assets/images/contact-lg.webp" alt="Contact image background" />
+					<img class="img-splash" src="./assets/images/contact-portrait.webp" alt="Art piece: Blue Lady" alt="Portrait photo of Tarryn Manley" />
 				</div>
 			</div>
 		</div>
