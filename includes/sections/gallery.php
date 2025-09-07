@@ -11,4 +11,7 @@
 	<!-- Featured Gallery Items (loaded from JSON via PHP) -->
 	<div id="galleryFeatured" class="row">
 		<?php echo GalleryHelper::renderFeaturedItems(); ?>
+		<div class="w-100 flex flex-x mb-50">
+			<a class="btn clr-dark" href="./gallery.php">View Full Gallery</a>
+		</div>
 	</div>

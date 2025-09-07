@@ -10,25 +10,25 @@
 
 		// Enhanced styles for clickable gallery cards
 		a {
-			display: block;
-			transition: all 0.3s ease;
 			border-radius: 8px;
+			color: inherit;
+			display: block;
 			overflow: hidden;
 			text-decoration: none;
-			color: inherit;
+			transition: all 0.3s ease;
 
-			&:hover {
-				transform: translateY(-5px);
-				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+			// &:hover {
+			// 	transform: translateY(-5px);
+			// 	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 
-				.img img {
-					transform: scale(1.05);
-				}
+			// 	.img img {
+			// 		transform: scale(1.05);
+			// 	}
 
-				.title {
-					color: #eb1d36;
-				}
-			}
+			// 	.title {
+			// 		color: #eb1d36;
+			// 	}
+			// }
 		}
 
 		p {
@@ -45,9 +45,9 @@
 
 		.img {
 			align-items: center;
+			border-radius: 8px;
 			display: flex;
 			overflow: hidden;
-			border-radius: 8px;
 		}
 
 		.img img {
@@ -56,12 +56,13 @@
 			height: 300px;
 			object-fit: cover;
 			object-position: center;
-			width: 200px;
 			transition: transform 0.3s ease;
+			width: 200px;
 		}
 
 		hr {
-			margin: 10px 0;
+			color: rgb(250, 250, 250);
+			margin: 10px 0
 		}
 	}
 
