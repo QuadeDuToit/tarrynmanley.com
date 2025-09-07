@@ -4,20 +4,65 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Author: Tarryn Manley">
+	<meta name="description" content="Tarryn Manley - South African visual artist specializing in bold abstract paintings using acrylic, ink, pastels, and spray paint. Commission artwork available. Cape Town based.">
+	<meta name="keywords" content="Tarryn Manley, South African artist, abstract art, visual artist, Cape Town artist, acrylic paintings, commissioned artwork, contemporary art">
+	<meta name="author" content="Tarryn Manley">
 	<meta name="robots" content="index,follow">
-	<title>Tarryn Manley</title>
+	<title>Tarryn Manley - Visual Artist | Abstract Paintings & Commissioned Art | Cape Town</title>
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://tarrynmanley.com/">
+	<meta property="og:title" content="Tarryn Manley - Visual Artist | Abstract Paintings & Commissioned Art">
+	<meta property="og:description" content="South African visual artist specializing in bold abstract paintings using acrylic, ink, pastels, and spray paint. Commission artwork available.">
+	<meta property="og:image" content="https://tarrynmanley.com/assets/images/profile.webp">
+	<meta property="og:site_name" content="Tarryn Manley Art">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://tarrynmanley.com/">
+	<meta property="twitter:title" content="Tarryn Manley - Visual Artist | Abstract Paintings & Commissioned Art">
+	<meta property="twitter:description" content="South African visual artist specializing in bold abstract paintings using acrylic, ink, pastels, and spray paint.">
+	<meta property="twitter:image" content="https://tarrynmanley.com/assets/images/profile.webp">
 
 	<link rel="canonical" href="https://tarrynmanley.com/" />
 	<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 	<link rel="stylesheet" href="assets/styles/main.css">
+
+	<!-- Structured Data for SEO -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Tarryn Manley",
+			"jobTitle": "Visual Artist",
+			"description": "South African visual artist specializing in bold abstract paintings using acrylic, ink, pastels, and spray paint.",
+			"url": "https://tarrynmanley.com",
+			"image": "https://tarrynmanley.com/assets/images/profile.webp",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "11 Hope Street",
+				"addressLocality": "Claremont",
+				"addressRegion": "Cape Town",
+				"addressCountry": "South Africa"
+			},
+			"telephone": "+27 073 386 5567",
+			"email": "tarryn@tarrynmanley.com",
+			"worksFor": {
+				"@type": "Organization",
+				"name": "Independent Artist"
+			},
+			"knowsAbout": ["Abstract Art", "Acrylic Painting", "Contemporary Art", "Commissioned Artwork"],
+			"sameAs": []
+		}
+	</script>
 
 </head>
 
 <body>
 	<section id="home-banner" class="container">
 		<!-- home banner -->
-		<div class="row flex header">
+		<header class="row flex header">
 			<div class="col-8 offset-2 text-right">
 				<h1 class="clr-primary text-shadow ">
 					TARRYN MANLEY
@@ -26,7 +71,7 @@
 					intuitive Artist
 				</h2>
 			</div>
-		</div>
+		</header>
 		<div class="row">
 			<div class="col-2 img-self-portait">
 				<img src="./assets/images/profile.webp" alt="Photo of Tarryn Manley" fetchpriority="high" />
@@ -119,6 +164,7 @@
 						muted
 						loop
 						playsinline
+						preload="none"
 						data-src="assets/videos/petal.mp4"
 						poster="./assets/images/contact-lg.webp">
 						<source data-src="assets/videos/petal.mp4" type="video/mp4">
@@ -143,7 +189,7 @@
 		<div id="galleryFeatured" class="row">
 			<div class="col-4 gallery-card">
 				<div class="img">
-					<img src="https://placehold.co/320x200/000000/FFF" />
+					<img src="https://placehold.co/320x200/000000/FFF" alt="Abstract artwork: VERSUS - Light and Space concept painting" />
 				</div>
 				<p class="title">VERSUS</p>
 				<hr />
@@ -162,7 +208,7 @@
 
 			<div class="col-4 gallery-card">
 				<div class="img">
-					<img src="https://placehold.co/320x230/000000/FFF" />
+					<img src="https://placehold.co/320x230/000000/FFF" alt="Abstract artwork: RIGHTEOUS ANGER - Faces of Red series" />
 				</div>
 				<p class="title">RIGHTEOUS ANGER</p>
 				<hr />
@@ -181,7 +227,7 @@
 
 			<div class="col-4 gallery-card">
 				<div class="img">
-					<img src="https://placehold.co/320x230/000000/FFF" />
+					<img src="https://placehold.co/320x230/000000/FFF" alt="Abstract artwork: COLORS OF WAR - Rainbow of Life concept painting" />
 				</div>
 				<p class="title">COLORS OF WAR</p>
 				<hr />
