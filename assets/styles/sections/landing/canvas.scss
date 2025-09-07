@@ -2,20 +2,20 @@
 	padding: 25px 0 60px 60px;
 
 	.img-video {
-		background-image: url('https://placehold.co/420x540/000000/FFF');
-		height: 540px;
-		margin-left: -40px;
-		width: 420px;
-		overflow: hidden;
-		display: flex;
 		align-items: center;
+		background-image: url('https://placehold.co/420x540/000000/FFF');
+		display: flex;
+		height: 540px;
 		justify-content: center;
+		margin-left: -40px;
+		overflow: hidden;
+		width: 420px;
 
 		video {
-			width: 420px;
+			border-radius: 8px;
 			height: 540px;
 			object-fit: cover;
-			border-radius: 8px;
+			width: 420px;
 
 			&.lazy-video {
 				background: #f0f0f0;

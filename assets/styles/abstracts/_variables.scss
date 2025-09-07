@@ -56,69 +56,38 @@ $clr-danger-light: #ad6565;
 // border colours
 $animation-speed: 300ms;
 
-$themes: ("extra-dark": (
-		"default": $clr-extra_dark,
+$themes: (
+	"extra-dark": ("default": $clr-extra_dark,
 		"dark":$clr-secondary-dark,
-		"light":$clr-secondary-light
-	),
-	"dark":
-	(
-	"default": $clr-dark,
-	"dark":$clr-extra_dark,
-	"light":$clr-light
-	),
-	"light":
-	(
-		"default": $clr-light,
+		"light":$clr-secondary-light),
+	"dark": ("default": $clr-dark,
+		"dark":$clr-extra_dark,
+		"light":$clr-light),
+	"light": ("default": $clr-light,
 		"dark":$clr-extra_light,
-		"light":$clr-extra_light
-	),
-	"extra-light":
-	(
-		"default": $clr-extra_light,
+		"light":$clr-extra_light),
+	"extra-light": ("default": $clr-extra_light,
 		"dark":$clr-secondary-dark,
-		"light":$clr-secondary-light
-	),
-	"default":
-	(
-		"default": $clr-default,
+		"light":$clr-secondary-light),
+	"default": ("default": $clr-default,
 		"dark":$clr-dark,
-		"light":$clr-light
-	),
-	"primary":
-	(
-		"default": $clr-primary,
+		"light":$clr-light),
+	"primary": ("default": $clr-primary,
 		"dark":$clr-primary-dark,
-		"light":$clr-primary-light
-	),
-	"secondary":
-	(
-		"default": $clr-secondary,
+		"light":$clr-primary-light),
+	"secondary": ("default": $clr-secondary,
 		"dark":$clr-secondary-dark,
-		"light":$clr-secondary-light
-	),
-	"success":
-	(
-		"default": $clr-success,
+		"light":$clr-secondary-light),
+	"success": ("default": $clr-success,
 		"dark":$clr-success-dark,
-		"light":$clr-success-light
-	),
-	"info":
-	(
-		"default": $clr-info,
+		"light":$clr-success-light),
+	"info": ("default": $clr-info,
 		"dark":$clr-info-dark,
-		"light":$clr-info-light
-	),
-	"warning":
-	(
-		"default": $clr-warning,
+		"light":$clr-info-light),
+	"warning": ("default": $clr-warning,
 		"dark":$clr-warning-dark,
-		"light":$clr-warning-light
-	),
-	"danger":
-	(
-		"default": $clr-danger,
+		"light":$clr-warning-light),
+	"danger": ("default": $clr-danger,
 		"dark":$clr-danger-dark,
-		"light":$clr-danger-light
-	)
+		"light":$clr-danger-light)
 );

@@ -6,6 +6,7 @@
 // @import './../abstracts/variables';
 @use "../base/typography";
 @use "../layout/flex";
+
 .control-size-sm {
     height: $control-size-sm;
     max-height: $control-size-sm;
@@ -28,27 +29,29 @@
     box-shadow: unset;
     -webkit-box-shadow: unset;
     -webkit-text-fill-color: unset;
+    border: none;
     filter: unset;
     padding: 0 25px;
-    border: none;
     @extend .font-size-md;
     cursor: pointer;
-    transition: background-color 200ms, color 200ms, border 200ms;
     text-transform: capitalize;
+    transition: background-color 200ms, color 200ms, border 200ms;
     @extend .control-size-md;
-    // display: inline-flex;
-    // @extend .flex-center;
-    vertical-align: middle;
     box-sizing: border-box;
     color: white;
     font-weight: 400;
     text-transform: capitalize;
+    // display: inline-flex;
+    // @extend .flex-center;
+    vertical-align: middle;
+
     & {
         transition: background-color 200ms, color 200ms, border 200ms;
     }
+
     //.btn__icon,
     //.btn__text {
-        // color: map.get($themes, 'default');
+    // color: map.get($themes, 'default');
     //}
     &:hover,
     &:focus {
@@ -57,53 +60,64 @@
         -webkit-text-fill-color: unset;
         filter: unset;
     }
+
     &.btn__radius {
         border-radius: 5px;
     }
+
     &.btn__block {
         display: block;
-        width: 100%;
         text-align: center;
+        width: 100%;
         @extend .flex;
         @extend .flex-center;
     }
+
     .icon {
         font-size: 19px;
         margin-right: 10px;
         margin-top: -2px;
         transition: color 200ms;
+
         &::before,
         &::after {
             color: white;
             transition: color 200ms;
         }
     }
+
     &.btn__sm {
         @extend .control-size-sm;
         padding: 5px 25px;
+
         &>.icon {
-            margin-top: 0;
             font-size: 15px;
+            margin-top: 0;
         }
     }
+
     &.btn__lg {
         @extend .control-size-lg;
         padding: 5px 25px;
+
         &>.icon {
-            margin-top: 0;
             font-size: 15px;
+            margin-top: 0;
         }
     }
+
     @each $name,
     $theme in $themes {
         &.btn-#{$name} {
             background-color: map.get($theme, 'default');
-            color: $clr-default;
             border: solid $btn-border-size map.get($theme, 'default');
+            color: $clr-default;
+
             &:hover {
                 background-color: map.get($theme, 'dark');
                 border-color: map.get($theme, 'dark');
             }
+
             // &:active {
             //     background-color: map.get($theme, 'dark');
             //     border-color: map.get($theme, 'dark');
@@ -111,10 +125,13 @@
             &.btn__outline {
                 background-color: unset;
                 color: map.get($theme, 'default');
+
                 &:hover {
                     color: map.get($theme, 'dark');
+
                     .icon,
                     .text {
+
                         &,
                         &::before,
                         &::after {
@@ -122,8 +139,10 @@
                         }
                     }
                 }
+
                 .btn__icon,
                 .btn__text {
+
                     &,
                     &::before,
                     &::after {

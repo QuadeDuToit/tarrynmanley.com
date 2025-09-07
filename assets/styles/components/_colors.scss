@@ -5,35 +5,46 @@
 $theme in $themes {
     .bg-#{$name} {
         background: map.get($theme, 'default');
+
         &-dark {
             background: map.get($theme, 'dark');
+
             &--hover:hover {
                 background: map.get($theme, 'dark');
             }
         }
+
         &-light {
             background: map.get($theme, 'light');
+
             &--hover:hover {
                 background: map.get($theme, 'light');
             }
         }
+
         &--hover:hover {
             background: map.get($theme, 'default');
         }
     }
+
     .clr-#{$name} {
+
         &,
         &::before,
         &::after {
             color: map.get($theme, 'default');
         }
+
         &-dark {
+
             &,
             &::before,
             &::after {
                 color: map.get($theme, 'dark');
             }
+
             &--hover:hover {
+
                 &,
                 &::before,
                 &::after {
@@ -41,13 +52,17 @@ $theme in $themes {
                 }
             }
         }
+
         &-light {
+
             &,
             &::before,
             &::after {
                 color: map.get($theme, 'light');
             }
+
             &--hover:hover {
+
                 &,
                 &::before,
                 &::after {
@@ -55,7 +70,9 @@ $theme in $themes {
                 }
             }
         }
+
         &--hover:hover {
+
             &,
             &::before,
             &::after {
