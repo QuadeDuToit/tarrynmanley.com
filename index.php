@@ -21,7 +21,7 @@
 </head>
 
 <body>
-	<section id="home-banner" class="container" fetchpriority="high">
+	<section id="home-banner" class="container">
 		<!-- home banner -->
 		<div class="row flex header">
 			<div class="col-8 offset-2 text-right">
@@ -35,7 +35,7 @@
 		</div>
 		<div class="row">
 			<div class="col-2 img-self-portait">
-				<img src="./assets/images/profile.webp" alt="Photo of Tarryn Manley" />
+				<img src="./assets/images/profile.webp" alt="Photo of Tarryn Manley" fetchpriority="high" />
 			</div>
 			<div class="col-10 py-15 pr-30 pl-30">
 				<p class="mb-30">
