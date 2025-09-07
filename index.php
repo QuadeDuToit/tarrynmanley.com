@@ -32,13 +32,6 @@
 		}
 	</script>
 
-	<style>
-		html,
-		body {
-			margin: 0 auto;
-			width: 1200px;
-		}
-	</style>
 </head>
 
 <body>
