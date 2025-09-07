@@ -3,73 +3,14 @@ require_once 'includes/gallery-helper.php';
 
 // Get the artwork ID from URL parameter
 $artwork_id = $_GET['id'] ?? '';
-
-// WORKAROUND: If $_GET is empty, try to parse URL manually
-if (empty($artwork_id) && isset($_SERVER['REQUEST_URI'])) {
-    $url_parts = parse_url($_SERVER['REQUEST_URI']);
-    if (isset($url_parts['query'])) {
-        parse_str($url_parts['query'], $query_params);
-        $artwork_id = $query_params['id'] ?? '';
-    }
-}
-
 $artwork = null;
 
-// DEBUG: Let's see what we're working with
-echo "<div style='background: black; color: white; padding: 10px; margin: 10px; border-radius: 5px;'>";
-echo "<strong>DEBUG INFO:</strong><br>";
-echo "artwork_id from URL: '" . htmlspecialchars($artwork_id) . "'<br>";
-echo "URL parameters: " . print_r($_GET, true) . "<br>";
-echo "Full REQUEST_URI: " . htmlspecialchars($_SERVER['REQUEST_URI'] ?? 'N/A') . "<br>";
-echo "QUERY_STRING: " . htmlspecialchars($_SERVER['QUERY_STRING'] ?? 'N/A') . "<br>";
-echo "PHP_SELF: " . htmlspecialchars($_SERVER['PHP_SELF'] ?? 'N/A') . "<br>";
-
-// Manual test - let's try to get a specific artwork directly
-echo "<br><strong>MANUAL TEST:</strong><br>";
-$test_artwork = GalleryHelper::getArtworkByIdentifier('blue_lady');
-echo "Manual lookup for 'blue_lady': " . ($test_artwork ? 'FOUND' : 'NOT FOUND') . "<br>";
-if ($test_artwork) {
-	echo "Test artwork title: " . htmlspecialchars($test_artwork['title']) . "<br>";
-}
-
-// Also test with a different artwork
-$test_artwork2 = GalleryHelper::getArtworkByIdentifier('otherworld');
-echo "Manual lookup for 'otherworld': " . ($test_artwork2 ? 'FOUND' : 'NOT FOUND') . "<br>";
+echo $artwork_id;
 
 // Try to find the artwork by ID
 if (!empty($artwork_id)) {
 	$artwork = GalleryHelper::getArtworkByIdentifier($artwork_id);
-	echo "<br>Artwork found: " . ($artwork ? 'YES' : 'NO') . "<br>";
-	if ($artwork) {
-		echo "Artwork title: " . htmlspecialchars($artwork['title'] ?? 'No title') . "<br>";
-		echo "Artwork filename: " . htmlspecialchars($artwork['fileName'] ?? 'No filename') . "<br>";
-	}
-} else {
-	echo "<br>artwork_id is empty<br>";
 }
-
-// Let's also see what artworks are available
-$all_artworks = GalleryHelper::getAllItems();
-echo "<br>Total artworks available: " . count($all_artworks) . "<br>";
-if (count($all_artworks) > 0) {
-	echo "First few artwork identifiers:<br>";
-	for ($i = 0; $i < min(3, count($all_artworks)); $i++) {
-		$item = $all_artworks[$i];
-		$fileNameWithoutExt = isset($item['fileName']) ? pathinfo($item['fileName'], PATHINFO_FILENAME) : 'N/A';
-		echo "- " . htmlspecialchars($item['title'] ?? 'No title') . " | filename: " . htmlspecialchars($fileNameWithoutExt) . "<br>";
-	}
-}
-
-// Test URL generation
-echo "<br><strong>URL GENERATION TEST:</strong><br>";
-if (count($all_artworks) > 0) {
-	$first_artwork = $all_artworks[0];
-	$generated_url = GalleryHelper::getArtworkUrl($first_artwork);
-	echo "Generated URL for first artwork: " . htmlspecialchars($generated_url) . "<br>";
-	echo '<a href="' . $generated_url . '" style="color: yellow;">Click to test this link</a><br>';
-}
-
-echo "</div>";
 
 // Fallback to first artwork if none found
 if (!$artwork) {
