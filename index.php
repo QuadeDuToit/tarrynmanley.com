@@ -43,6 +43,43 @@
 
 	<?php include 'includes/sections/gallery.php'; ?>
 
+
+	<section id="gallery" class="container">
+		<div class="row">
+			<div class="col-5">
+				<h2 class="clr-primary text-shadow   text-center">
+					GALLERY
+				</h2>
+			</div>
+		</div>
+
+		<div class="row section-portrait">
+			<div class="col-6">
+				<div class="portrait-lg">
+					<img src="./assets/images/gallery/lg/blue_lady.webp" />
+				</div>
+			</div>
+			<div class="col-4 offset-1 gallery-card">
+				<div class="portrait">
+					<img src="./assets/images/gallery/blue_lady.webp" />
+				</div>
+				<p class="title">a</p>
+				<hr />
+				<p>
+					Dimensions: b
+				</p>
+				<hr />
+				<p>
+					Concept: c
+				</p>
+				<hr />
+				<p>
+					Year: d
+				</p>
+			</div>
+		</div>
+	</section>
+
 	<?php include 'includes/sections/splash-01.php'; ?>
 
 	<?php include 'includes/sections/splash-02.php'; ?>
