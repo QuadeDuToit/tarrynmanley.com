@@ -6,8 +6,30 @@
 
 	.gallery-card {
 		margin-bottom: 60px;
-
 		padding: 0 25px 0 25px;
+
+		// Enhanced styles for clickable gallery cards
+		a {
+			display: block;
+			transition: all 0.3s ease;
+			border-radius: 8px;
+			overflow: hidden;
+			text-decoration: none;
+			color: inherit;
+
+			&:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+				.img img {
+					transform: scale(1.05);
+				}
+
+				.title {
+					color: #eb1d36;
+				}
+			}
+		}
 
 		p {
 			font-size: 16px;
@@ -18,12 +40,14 @@
 			letter-spacing: 0.094em;
 			padding: 25px 0;
 			text-transform: uppercase;
+			transition: color 0.3s ease;
 		}
 
 		.img {
 			align-items: center;
 			display: flex;
 			overflow: hidden;
+			border-radius: 8px;
 		}
 
 		.img img {
@@ -33,12 +57,12 @@
 			object-fit: cover;
 			object-position: center;
 			width: 200px;
+			transition: transform 0.3s ease;
 		}
 
 		hr {
 			margin: 10px 0;
 		}
-
 	}
 
 	.section-portrait {

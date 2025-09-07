@@ -53,18 +53,78 @@ class GalleryHelper
 	}
 
 	/**
+	 * Get a specific artwork by filename or title
+	 */
+	public static function getArtworkByIdentifier($identifier)
+	{
+		$all_items = self::loadGalleryData();
+
+		// First try to find by exact filename match (without extension)
+		foreach ($all_items as $item) {
+			if (isset($item['fileName'])) {
+				$fileNameWithoutExt = pathinfo($item['fileName'], PATHINFO_FILENAME);
+				if ($fileNameWithoutExt === $identifier) {
+					return $item;
+				}
+			}
+		}
+
+		// Then try to find by title slug (normalized)
+		$normalizedIdentifier = self::createSlug($identifier);
+		foreach ($all_items as $item) {
+			if (isset($item['title']) && self::createSlug($item['title']) === $normalizedIdentifier) {
+				return $item;
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * Get the first available artwork (fallback)
+	 */
+	public static function getFirstArtwork()
+	{
+		$all_items = self::loadGalleryData();
+		return !empty($all_items) ? $all_items[0] : null;
+	}
+
+	/**
+	 * Create a URL-friendly slug from a title
+	 */
+	public static function createSlug($text)
+	{
+		$text = strtolower($text);
+		$text = preg_replace('/[^a-z0-9\s-]/', '', $text);
+		$text = preg_replace('/[\s-]+/', '-', $text);
+		return trim($text, '-');
+	}
+
+	/**
+	 * Generate URL for artwork detail page
+	 */
+	public static function getArtworkUrl($item)
+	{
+		if (isset($item['fileName'])) {
+			$slug = pathinfo($item['fileName'], PATHINFO_FILENAME);
+			return "artwork.php?id=" . urlencode($slug);
+		}
+		return "artwork.php";
+	}
+
+	/**
 	 * Render a single gallery card
 	 */
-	public static function renderGalleryCard($item)
+	public static function renderGalleryCard($item, $linkToDetail = true)
 	{
 		$title = htmlspecialchars($item['title'] ?? 'Untitled');
 		$fileName = htmlspecialchars($item['fileName'] ?? 'placeholder.webp');
 		$dimensions = htmlspecialchars($item['dimensions'] ?? 'N/A');
 		$concept = htmlspecialchars($item['concept'] ?? 'N/A');
 		$year = htmlspecialchars($item['year'] ?? 'N/A');
+		$artworkUrl = $linkToDetail ? self::getArtworkUrl($item) : '#';
 
-		return '
-        <div class="col-4 gallery-card">
+		$cardContent = '
             <div class="img">
                 <img src="./assets/images/gallery/' . $fileName . '" alt="Abstract artwork: ' . $title . '" />
             </div>
@@ -74,8 +134,21 @@ class GalleryHelper
             <hr />
             <p>Concept: ' . $concept . '</p>
             <hr />
-            <p>Year: ' . $year . '</p>
+            <p>Year: ' . $year . '</p>';
+
+		if ($linkToDetail) {
+			return '
+        <div class="col-4 gallery-card">
+            <a href="' . $artworkUrl . '" style="text-decoration: none; color: inherit;">
+                ' . $cardContent . '
+            </a>
         </div>';
+		} else {
+			return '
+        <div class="col-4 gallery-card">
+            ' . $cardContent . '
+        </div>';
+		}
 	}
 
 	/**

@@ -2832,6 +2832,24 @@ p {
   margin-bottom: 60px;
   padding: 0 25px 0 25px;
 }
+#gallery .gallery-card a {
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+#gallery .gallery-card a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+#gallery .gallery-card a:hover .img img {
+  transform: scale(1.05);
+}
+#gallery .gallery-card a:hover .title {
+  color: #eb1d36;
+}
 #gallery .gallery-card p {
   font-size: 16px;
 }
@@ -2840,11 +2858,13 @@ p {
   letter-spacing: 0.094em;
   padding: 25px 0;
   text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 #gallery .gallery-card .img {
   align-items: center;
   display: flex;
   overflow: hidden;
+  border-radius: 8px;
 }
 #gallery .gallery-card .img img {
   border: solid white 5px;
@@ -2853,6 +2873,7 @@ p {
   object-fit: cover;
   object-position: center;
   width: 200px;
+  transition: transform 0.3s ease;
 }
 #gallery .gallery-card hr {
   margin: 10px 0;
