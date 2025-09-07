@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main page -->
+  <url>
+    <loc>https://tarrynmanley.com/</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Images on main page -->
+    <image:image>
+      <image:loc>https://tarrynmanley.com/assets/images/profile.webp</image:loc>
+      <image:caption>Photo of Tarryn Manley, intuitive artist</image:caption>
+      <image:title>Tarryn Manley Profile Photo</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://tarrynmanley.com/assets/images/blue-lady-lg.webp</image:loc>
+      <image:caption>Art piece: Blue Lady</image:caption>
+      <image:title>Blue Lady - Large Format</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://tarrynmanley.com/assets/images/gallery/blue_lady.webp</image:loc>
+      <image:caption>Art piece: Blue Lady with details</image:caption>
+      <image:title>Blue Lady - Gallery View</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://tarrynmanley.com/assets/images/blurb-creative-feeds.webp</image:loc>
+      <image:caption>Art piece: Creative Feeds</image:caption>
+      <image:title>Creative Feeds Artwork</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://tarrynmanley.com/assets/images/blurb-comissions.webp</image:loc>
+      <image:caption>Art piece: Commissions</image:caption>
+      <image:title>Commissions Artwork</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://tarrynmanley.com/assets/images/contact-lg.webp</image:loc>
+      <image:caption>Contact image background</image:caption>
+      <image:title>Contact Background Image</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://tarrynmanley.com/assets/images/contact-portrait.webp</image:loc>
+      <image:caption>Portrait photo of Tarryn Manley</image:caption>
+      <image:title>Tarryn Manley Portrait</image:title>
+    </image:image>
+    
+    <!-- SITU Images -->
+    <image:image>
+      <image:loc>https://tarrynmanley.com/assets/images/situ/coastal.webp</image:loc>
+      <image:caption>Art piece placed in coastal setting</image:caption>
+      <image:title>Coastal SITU</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://tarrynmanley.com/assets/images/situ-bg.webp</image:loc>
+      <image:caption>SITU background setting</image:caption>
+      <image:title>SITU Background</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Gallery page (if exists as separate page) -->
+  <url>
+    <loc>https://tarrynmanley.com/gallery.html</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Video content -->
+  <url>
+    <loc>https://tarrynmanley.com/assets/videos/petal.mp4</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

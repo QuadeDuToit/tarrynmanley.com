@@ -8,16 +8,10 @@
 	<meta name="robots" content="index,follow">
 	<title>Tarryn Manley</title>
 
+	<link rel="canonical" href="https://tarrynmanley.com/" />
+	<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 	<link rel="stylesheet" href="assets/styles/main.css">
 
-
-	<style>
-		html,
-		body {
-			margin: 0 auto;
-			width: 1200px;
-		}
-	</style>
 </head>
 
 <body>
