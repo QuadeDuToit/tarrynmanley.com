@@ -4,23 +4,52 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Author: Tarryn Manley">
+	<meta name="description"
+		content="Tarryn Manley Full Gallery - Complete collection of abstract paintings, acrylic artworks, and commissioned pieces by South African visual artist">
+	<meta name="keywords"
+		content="Tarryn Manley gallery, abstract art collection, South African artist portfolio, commissioned artwork">
 	<meta name="robots" content="index,follow">
-	<title>Tarryn Manley</title>
+	<title>Full Gallery - Tarryn Manley | Complete Art Collection | Abstract Paintings</title>
 
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://tarrynmanley.com/gallery.html">
+	<meta property="og:title" content="Full Gallery - Tarryn Manley | Complete Art Collection">
+	<meta property="og:description"
+		content="Browse the complete collection of abstract paintings and commissioned artwork by South African visual artist Tarryn Manley">
+	<meta property="og:image" content="https://tarrynmanley.com/assets/images/gallery/blue_lady.webp">
+
+	<link rel="canonical" href="https://tarrynmanley.com/gallery.html" />
 	<link rel="stylesheet" href="assets/styles/main.css">
 
-	<meta name="viewport" content="width=1200">
 	<style>
 		html,
 		body {
-			width: 1200px;
 			margin: 0 auto;
+			width: 1200px;
 		}
 	</style>
 </head>
 
 <body>
+	<!-- Navigation Menu -->
+	<nav id="main-nav" class="main-navigation">
+		<button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+			<span class="nav-icon"></span>
+			<span class="nav-icon"></span>
+			<span class="nav-icon"></span>
+		</button>
+		<div id="nav-menu" class="nav-menu">
+			<ul class="nav-list">
+				<li><a href="index.php#home-banner" class="nav-link">Home</a></li>
+				<li><a href="index.php#my-canvas" class="nav-link">My Canvas</a></li>
+				<li><a href="index.php#gallery" class="nav-link">Featured Gallery</a></li>
+				<li><a href="gallery.html" class="nav-link current-page">Full Gallery</a></li>
+				<li><a href="index.php#SITU" class="nav-link">See In Situ</a></li>
+				<li><a href="index.php#contact" class="nav-link">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
 
 	<section id="gallery" class="container">
 		<div class="row">
@@ -145,11 +174,11 @@
 					Year: 2022
 				</p>
 			</div>
-			
+
 		</div>
 	</section>
 
-	
+
 	<section id="contact" class="container">
 		<div class="row">
 			<div class="col-12 ">
@@ -182,6 +211,42 @@
 			</div>
 		</div>
 	</section>
+
+	<script>
+		// Navigation Menu Functionality
+		document.addEventListener('DOMContentLoaded', function ()
+		{
+			const navToggle = document.getElementById('nav-toggle');
+			const navMenu = document.getElementById('nav-menu');
+
+			navToggle.addEventListener('click', function ()
+			{
+				navToggle.classList.toggle('active');
+				navMenu.classList.toggle('active');
+			});
+
+			// Close menu when clicking outside
+			document.addEventListener('click', function (event)
+			{
+				if(!navToggle.contains(event.target) && !navMenu.contains(event.target))
+				{
+					navToggle.classList.remove('active');
+					navMenu.classList.remove('active');
+				}
+			});
+
+			// Close menu when clicking on navigation links
+			const navLinks = document.querySelectorAll('.nav-link');
+			navLinks.forEach(link =>
+			{
+				link.addEventListener('click', function ()
+				{
+					navToggle.classList.remove('active');
+					navMenu.classList.remove('active');
+				});
+			});
+		});
+	</script>
 	<script src="./assets/js/main.js"></script>
 
 </body>
