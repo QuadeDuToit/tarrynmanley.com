@@ -2583,45 +2583,73 @@ hr.header {
   color: #6E6E6E;
 }
 
-#home-banner {
+#home-banner .header {
   background: url("../../assets/images/header-splash.webp");
-  height: 625px;
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
-  padding: 15px;
+  background-size: cover;
+  height: 250px;
 }
-#home-banner h1 {
-  margin-top: 120px;
+#home-banner .header h1 {
+  font-size: 70px;
+  margin-top: 65px;
+  text-transform: uppercase;
 }
-#home-banner h2 {
+#home-banner .header h2 {
+  font-size: 40px;
   letter-spacing: 0.24em;
-  font-size: 44px;
-}
-#home-banner p {
-  letter-spacing: 0.017em;
-  font-size: 15px;
-}
-#home-banner .mt-c-lg {
-  margin-top: 165px;
-}
-@media (min-width: 768px) {
-  #home-banner .mt-c-lg {
-    margin-top: 65px;
-  }
-  #home-banner p {
-    text-align: center !important;
-  }
+  margin-right: 12px;
+  text-transform: uppercase;
 }
 
+p {
+  font-size: 15px;
+  letter-spacing: 0.017em;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mt-c-lg {
+  margin-top: 165px;
+}
+
+.img-self-portait {
+  padding-left: 30px;
+  text-align: right;
+}
+.img-self-portait img {
+  margin-top: -30px;
+}
+
+@media (min-width: 768px) {
+  .mt-c-lg {
+    margin-top: 65px;
+  }
+}
 #my-canvas {
   padding: 25px 0 60px 60px;
 }
 #my-canvas .img-video {
+  background-image: url("https://placehold.co/420x540/000000/FFF");
+  height: 540px;
+  margin-left: -40px;
+  width: 420px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#my-canvas .img-video video {
   width: 420px;
   height: 540px;
-  background-image: url("https://placehold.co/420x540/000000/FFF");
-  margin-left: -40px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+#my-canvas .img-video video.lazy-video {
+  background: #f0f0f0;
+  opacity: 0.7;
 }
 @media (min-width: 576px) {
   #my-canvas {
@@ -2634,8 +2662,8 @@ hr.header {
     display: none;
   }
   #my-canvas p {
-    text-align: center;
     padding: 0;
+    text-align: center;
   }
   #my-canvas .img-video {
     margin-left: 0px;
@@ -2657,16 +2685,13 @@ hr.header {
   #my-canvas .col-sm-hide {
     display: unset;
   }
-  #my-canvas p {
-    padding-right: 70px;
-  }
 }
 #gallery h2 {
   margin: 60px 0;
 }
 #gallery .gallery-card {
-  padding: 0 25px 0 25px;
   margin-bottom: 60px;
+  padding: 0 25px 0 25px;
 }
 #gallery .gallery-card p {
   font-size: 16px;
@@ -2678,19 +2703,17 @@ hr.header {
   text-transform: uppercase;
 }
 #gallery .gallery-card .img {
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
+  overflow: hidden;
 }
 #gallery .gallery-card .img img {
-  width: 100%;
-  height: 220px;
+  border: solid white 5px;
+  display: block;
+  height: 300px;
   object-fit: cover;
   object-position: center;
-  display: block;
+  width: 200px;
 }
 #gallery .gallery-card hr {
   margin: 10px 0;
@@ -2733,7 +2756,7 @@ hr.header {
 }
 
 #splash-02 {
-  padding: 20px 30px 20px 40px;
+  padding: 20px 30px 50px 40px;
 }
 #splash-02 h2 {
   font-size: 60px;
@@ -2781,24 +2804,43 @@ hr.header {
   background-image: url("../../assets/images/situ-bg.webp");
   background-position: center;
   background-size: cover;
-  width: 700px;
   height: 450px;
   position: relative;
+  width: 700px;
 }
-#SITU #situ {
-  object-position: center;
+#SITU #situ-wrapper {
   background-size: cover;
-  width: 180px;
+  border: none;
+  cursor: pointer;
   height: auto;
+  left: 15px;
+  margin: auto;
+  max-height: 235px;
   min-height: 200px;
-  max-height: 240px;
   overflow: hidden;
   position: absolute;
-  margin: auto;
-  left: 0;
   right: 0;
-  top: 45px;
-  cursor: pointer;
+  top: 22px;
+  user-select: none;
+  width: 185px;
+}
+#SITU #situ-wrapper::after {
+  box-shadow: inset 0px 0px 0.3em black;
+  content: "";
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  width: 100%;
+  z-index: 9;
+}
+#SITU #situ-wrapper #situ {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 
 #contact {
@@ -2809,30 +2851,32 @@ hr.header {
   padding: 45px 0 0 30px;
 }
 #contact .img-bg {
-  position: relative;
   background-image: url("https://placehold.co/345x590/000000/FFF");
   background-position: center;
   background-size: cover;
   height: 590px;
-  width: 345px;
   margin-left: auto;
+  object-fit: cover;
+  position: relative;
+  width: 345px;
 }
 #contact .img-splash {
-  position: absolute;
   background-image: url("https://placehold.co/305x465/555555/777");
   background-position: center;
   background-size: cover;
   height: 465px;
-  width: 305px;
   margin-left: auto;
   margin-top: 70px;
+  object-position: center;
+  position: absolute;
   right: 280px;
+  width: 305px;
 }
 #contact .contact-details {
-  margin-left: 30px;
-  position: absolute;
-  margin-top: auto;
   bottom: 0;
+  margin-left: 30px;
+  margin-top: auto;
+  position: absolute;
 }
 #contact .contact-details h3 {
   font-size: 22px;

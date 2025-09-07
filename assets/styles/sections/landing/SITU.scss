@@ -1,5 +1,6 @@
 #SITU {
 	padding-bottom: 60px;
+
 	h2 {
 		font-size: 60px;
 		padding: 50px 0 30px 0;
@@ -9,24 +10,45 @@
 		background-image: url('../../assets/images/situ-bg.webp');
 		background-position: center;
 		background-size: cover;
-		width: 700px;
 		height: 450px;
 		position: relative;
+		width: 700px;
 	}
 
-	#situ {
-		object-position: center;
+	#situ-wrapper {
 		background-size: cover;
-		width: 180px;
+		border: none;
+		cursor: pointer;
 		height: auto;
+		left: 15px;
+		margin: auto;
+		max-height: 235px;
 		min-height: 200px;
-		max-height: 240px;
 		overflow: hidden;
 		position: absolute;
-		margin: auto;
-		left: 0;
 		right: 0;
-		top: 45px;
-		cursor: pointer;
+		top: 22px;
+		user-select: none;
+		width: 185px;
+
+		&::after {
+			box-shadow: inset 0px 0px 0.3em black;
+			content: '';
+			height: 100%;
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			user-select: none;
+			width: 100%;
+			z-index: 9;
+		}
+
+		#situ {
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			width: 100%;
+		}
 	}
 }

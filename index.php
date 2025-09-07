@@ -10,46 +10,80 @@
 
 	<link rel="stylesheet" href="assets/styles/main.css">
 
-	<meta name="viewport" content="width=1200">
+
 	<style>
 		html,
 		body {
-			width: 1200px;
 			margin: 0 auto;
+			width: 1200px;
 		}
 	</style>
 </head>
 
 <body>
-
 	<section id="home-banner" class="container">
 		<!-- home banner -->
-		<div class="row flex">
-			<div class="col-12">
-				<h1 class="text-center clr-primary text-shadow ">
+		<div class="row flex header">
+			<div class="col-8 offset-2 text-right">
+				<h1 class="clr-primary text-shadow ">
 					TARRYN MANLEY
 				</h1>
-			</div>
-			<div class="col-9 offset-3 mt-c-lg col-md-12 offset-md-0">
-				<h2 class="text-center clr-primary mb-20 text-shadow ">
-					VISUAL ARTIST
+				<h2 class="clr-primary mb-20 text-shadow ">
+					intuitive Artist
 				</h2>
-				<p class="text-right clr-default">
-					As a self-taught artist with a background in interior design, I channel my creative instincts into
-					bold, statement-<br class="hide-lg" />
-					making artworks. My passion lies in exploring the boundless possibilities of acrylic paints, inks,
-					pastels, spray paint,<br class="hide-lg" />
-					and pencil on canvas—each stroke and splash capturing an essence of emotion and energy.<br
-						class="hide-lg" />
-					What excites me most about art is how it transcends boundaries, inviting viewers to see and feel
-					someg uniquely<br class="hide-lg" />
-					personal. My pieces are influenced by the lush intricacies of nature, the mysteries of the cosmos,
-					and the depths of<br class="hide-lg" />
-					my own dream states and emotions. Here, you'll discover a collection that’s as dynamic as it is
-					evocative—an<br class="hide-lg" />
-					invitation to pause, reflect, and connect.
-				</p>
 			</div>
+		</div>
+		<div class="row">
+			<div class="col-2 img-self-portait">
+				<img src="./assets/images/profile.webp" />
+			</div>
+			<div class="col-10 py-15 pr-30 pl-30">
+				<p class="mb-30">
+					From the moment I could hold a crayon, art has been my steadfast companion. What started as a
+					childhood fascination quickly
+					blossomed into an enduring love affair, a constant urge to create and explore. Even then, I knew my
+					path was intertwined with
+					the vibrant world of colors and forms.
+				</p>
+
+				<p class="mb-30">
+					Art became more than just a passion during a challenging period in my life; it was a beacon, guiding
+					me through darkness and
+					helping me find my voice. Now, it brings me immeasurable joy, a feeling I pour into every
+					brushstroke. As a self-taught artist with
+					a background in interior design, I've honed my creative instincts, channeling them into bold,
+					statement-making artworks that
+					speak directly from the heart.
+				</p>
+
+				<p class="mb-30">
+					My studio is a playground where I push boundaries and embrace the unexpected. I constantly challenge
+					myself to try new things,
+					finding beauty in the process of learning and celebrating every "happy mistake" that leads to an
+					exciting discovery. You'll find
+					my work a vibrant testament to this journey, as I explore the boundless possibilities of acrylic
+					paints, inks, pastels, spray paint,
+					and pencil on canvas. Each piece is a unique expression, capturing an essence of emotion and energy.
+				</p>
+
+				<p class="mb-30">
+					What truly excites me about art is its power to transcend boundaries, inviting you to see and feel
+					something uniquely personal.
+					My pieces are deeply influenced by the lush intricacies of nature, the mysteries of the cosmos, and
+					the depths of my own dream
+					states and emotions. Here, you'll discover a collection that's as dynamic as it is evocative—an
+					invitation to pause, reflect, and
+					connect with the very essence of your own feelings.
+				</p>
+
+				<p class="">
+					I invite you to explore my world and find a piece that resonates with your own story
+				</p>
+
+			</div>
+
+
+
 		</div>
 
 	</section>
@@ -65,6 +99,7 @@
 				</h3>
 				<div class="col-sm-show col-img-video">
 					<div class="img-video">
+
 					</div>
 				</div>
 				<p class="mt-30">
@@ -82,6 +117,18 @@
 			</div>
 			<div class="col-5 col-sm-hide">
 				<div class="img-video">
+					<video
+						class="lazy-video"
+						width="420"
+						height="540"
+						muted
+						loop
+						playsinline
+						data-src="assets/videos/petal.mp4"
+						poster="assets/images/video-poster.webp">
+						<source data-src="assets/videos/petal.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
 				</div>
 			</div>
 		</div>
@@ -97,11 +144,11 @@
 		</div>
 
 		<!-- SSO Fallback -->
-		 <!-- dont remove inner content -->
+		<!-- dont remove inner content -->
 		<div id="galleryFeatured" class="row">
 			<div class="col-4 gallery-card">
 				<div class="img">
-					<img src="https://placehold.co/320x230/000000/FFF" />
+					<img src="https://placehold.co/320x200/000000/FFF" />
 				</div>
 				<p class="title">VERSUS</p>
 				<hr />
@@ -160,12 +207,12 @@
 		<div class="row section-portrait">
 			<div class="col-6">
 				<div class="portrait-lg">
-					<img src="https://placehold.co/540x600/000000/FFF" />
+					<img src="./assets/images/blue-lady-lg.webp" />
 				</div>
 			</div>
 			<div class="col-4 offset-1 gallery-card">
 				<div class="portrait">
-					<img src="https://placehold.co/280x390/000000/FFF" />
+					<img src="./assets/images/gallery/blue_lady.webp" />
 				</div>
 				<p class="title">BLUE LADY</p>
 				<hr />
@@ -198,7 +245,7 @@
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-12 img-cloud">
-				<img src="https://placehold.co/530x590/000000/FFF" />
+				<img src="./assets/images/blurb-creative-feeds.webp" />
 			</div>
 		</div>
 	</section>
@@ -206,7 +253,7 @@
 	<section id="splash-02" class="container">
 		<div class="row col-rev">
 			<div class="col-lg-6 col-md-12 img-cloud">
-				<img src="https://placehold.co/530x590/000000/FFF" />
+				<img src="./assets/images/blurb-comissions.webp" />
 			</div>
 			<div class="col-lg-6 col-md-12 flex flex-y ">
 				<div class="container-fluid">
@@ -243,7 +290,9 @@
 			</div>
 			<div class="col-12 flex flex-x">
 				<div id="situ-bg">
-					<img src="./assets/images/situ/coastal.webp" id="situ" />
+					<div id="situ-wrapper">
+						<img src="./assets/images/situ/coastal.webp" id="situ" />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -273,10 +322,8 @@
 					</ul>
 				</div>
 				<div class="flex flex-y">
-					<div class="img-bg">
-					</div>
-					<div class="img-splash">
-					</div>
+					<img class="img-bg" src="./assets/images/contact-lg.webp" />
+					<img class="img-splash" src="./assets/images/contact-portrait.webp" />
 				</div>
 			</div>
 		</div>
@@ -296,6 +343,57 @@
 		</div>
 	</div>
 
+	<script>
+		// Lazy loading for videos
+		document.addEventListener('DOMContentLoaded', function() {
+			const lazyVideos = document.querySelectorAll('.lazy-video');
+
+			if ('IntersectionObserver' in window) {
+				const videoObserver = new IntersectionObserver(function(entries, observer) {
+					entries.forEach(function(entry) {
+						if (entry.isIntersecting) {
+							const video = entry.target;
+							const source = video.querySelector('source');
+
+							// Load the video source
+							video.src = video.dataset.src;
+							if (source) {
+								source.src = source.dataset.src;
+							}
+
+							// Load the video and play when ready
+							video.load();
+							video.addEventListener('loadeddata', function() {
+								video.play().catch(function(error) {
+									console.log('Auto-play prevented:', error);
+								});
+							});
+
+							// Remove the lazy class and stop observing
+							video.classList.remove('lazy-video');
+							videoObserver.unobserve(video);
+						}
+					});
+				}, {
+					rootMargin: '50px 0px' // Start loading 50px before it comes into view
+				});
+
+				lazyVideos.forEach(function(video) {
+					videoObserver.observe(video);
+				});
+			} else {
+				// Fallback for browsers without IntersectionObserver
+				lazyVideos.forEach(function(video) {
+					const source = video.querySelector('source');
+					video.src = video.dataset.src;
+					if (source) {
+						source.src = source.dataset.src;
+					}
+					video.load();
+				});
+			}
+		});
+	</script>
 	<script src="./assets/js/main.js"></script>
 </body>
 

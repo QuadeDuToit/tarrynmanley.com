@@ -7,32 +7,34 @@
 	}
 
 	.img-bg {
-		position: relative;
 		background-image: url('https://placehold.co/345x590/000000/FFF');
 		background-position: center;
 		background-size: cover;
 		height: 590px;
-		width: 345px;
 		margin-left: auto;
+		object-fit: cover;
+		position: relative;
+		width: 345px;
 	}
 
 	.img-splash {
-		position: absolute;
 		background-image: url('https://placehold.co/305x465/555555/777');
 		background-position: center;
 		background-size: cover;
 		height: 465px;
-		width: 305px;
 		margin-left: auto;
 		margin-top: 70px;
+		object-position: center;
+		position: absolute;
 		right: 280px;
+		width: 305px;
 	}
 
 	.contact-details {
-		margin-left: 30px;
-		position: absolute;
-		margin-top: auto;
 		bottom: 0;
+		margin-left: 30px;
+		margin-top: auto;
+		position: absolute;
 
 		h3 {
 			font-size: 22px;
