@@ -43,11 +43,10 @@
 
 	<?php include 'includes/sections/gallery.php'; ?>
 
-
 	<section id="gallery" class="container">
 		<div class="row">
 			<div class="col-5">
-				<h2 class="clr-primary text-shadow   text-center">
+				<h2 class="clr-primary text-shadow text-center">
 					GALLERY
 				</h2>
 			</div>

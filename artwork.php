@@ -5,8 +5,6 @@ require_once 'includes/gallery-helper.php';
 $artwork_id = $_GET['id'] ?? '';
 $artwork = null;
 
-echo $artwork_id;
-
 // Try to find the artwork by ID
 if (!empty($artwork_id)) {
 	$artwork = GalleryHelper::getArtworkByIdentifier($artwork_id);
@@ -188,7 +186,7 @@ if ($artwork) {
 			</div>
 		</div>
 
-		<div class="row">
+		<div id="galleryFeatured" class="row">
 			<?php
 			// Show 3 featured artworks as "related"
 			$featured_items = GalleryHelper::getFeaturedItems(3);
