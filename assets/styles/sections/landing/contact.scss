@@ -52,10 +52,12 @@
 	@media (max-width: 576px) {
 		h2 {
 			font-size: 34px;
+			padding-left: 0;
 			text-align: center;
 		}
 
 		.contact-details {
+			margin-left: 0;
 			position: relative;
 			text-align: center;
 		}

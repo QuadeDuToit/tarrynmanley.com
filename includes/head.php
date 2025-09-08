@@ -32,4 +32,4 @@ $canonical_url = $canonical_url ?? 'https://tarrynmanley.com/' . basename($_SERV
 
 <link rel="canonical" href="<?php echo htmlspecialchars($canonical_url); ?>" />
 <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-<link rel="stylesheet" href="assets/styles/main.css?6">
+<link rel="stylesheet" href="assets/styles/main.css?7">
