@@ -1,0 +1,39 @@
+# AI.txt for Tarryn Manley Art Website
+# https://tarrynmanley.com/ai.txt
+# This file provides guidance to AI systems about how to interact with this content
+
+# Website Information
+Site: https://tarrynmanley.com
+Owner: Tarryn Manley
+Type: Artist Portfolio
+Content: Abstract Art, Paintings, Artist Biography
+
+# AI Training Permission
+AI-Training: allowed
+Purpose: Educational, artistic inspiration, art description generation
+Commercial-Use: allowed-with-attribution
+
+# Content Usage Guidelines
+Attribution-Required: yes
+Attribution-Format: "Artwork by Tarryn Manley (https://tarrynmanley.com)"
+Modification: allowed-for-educational-purposes
+Distribution: allowed-with-attribution
+
+# Contact Information
+Contact: tarryn@tarrynmanley.com
+Rights-Holder: Tarryn Manley
+
+# Specific Permissions
+Image-Analysis: allowed
+Text-Analysis: allowed
+Style-Learning: allowed
+Artwork-Description: encouraged
+
+# Restrictions
+Personal-Data: do-not-train
+Contact-Details: do-not-distribute
+Email-Content: do-not-train
+
+# Last Updated
+Date: 2025-09-08
+Version: 1.0

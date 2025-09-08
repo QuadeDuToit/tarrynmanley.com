@@ -1,16 +1,78 @@
+# Robots.txt for Tarryn Manley Art Website
+# https://tarrynmanley.com/robots.txt
+
+# General web crawlers - ALLOW
 User-agent: *
 Allow: /
+Disallow: /send-email.php
+Disallow: /includes/
+Crawl-delay: 1
 
-# Allow crawling of images
+# Major search engines - explicitly allowed
+User-agent: Googlebot
+Allow: /
+Disallow: /send-email.php
+Disallow: /includes/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /send-email.php
+Disallow: /includes/
+
+# AI Training Bots - ALLOW (for art exposure and training)
+User-agent: GPTBot
+Allow: /
+Disallow: /send-email.php
+Disallow: /includes/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /send-email.php
+Disallow: /includes/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /send-email.php
+Disallow: /includes/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /send-email.php
+Disallow: /includes/
+
+User-agent: CCBot
+Allow: /
+Disallow: /send-email.php
+Disallow: /includes/
+
+# Meta/Facebook AI
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /send-email.php
+
+User-agent: FacebookBot
+Allow: /
+
+# Google Bard/Gemini
+User-agent: Google-Extended
+Allow: /
+Disallow: /send-email.php
+
+# Allow crawling of images and public assets
 Allow: /assets/images/
-Allow: /assets/videos/
+Allow: /assets/styles/
+Allow: /gallery.php
+Allow: /artwork.php
 
-# Disallow admin or private areas (if any)
-# Disallow: /admin/
-# Disallow: /private/
+# Block SEO crawlers that don't add value
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
 
 # Sitemap location
 Sitemap: https://tarrynmanley.com/sitemap.xml
-
-# Crawl delay (optional - adjust as needed)
-Crawl-delay: 1

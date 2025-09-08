@@ -13,6 +13,8 @@ $canonical_url = $canonical_url ?? 'https://tarrynmanley.com/' . basename($_SERV
 <meta name="keywords" content="<?php echo htmlspecialchars($page_keywords); ?>">
 <meta name="author" content="Tarryn Manley">
 <meta name="robots" content="index,follow">
+<meta name="ai-content-declaration" content="allowed">
+<meta name="ai-training" content="allowed-with-attribution">
 <title><?php echo htmlspecialchars($page_title); ?></title>
 
 <!-- Open Graph / Facebook -->
