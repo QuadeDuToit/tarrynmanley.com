@@ -37,8 +37,7 @@ if ($artwork) {
 <head>
 	<?php include 'includes/head.php'; ?>
 	<?php include 'includes/concept-modal-assets.php'; ?>
-
-	<?php include 'includes/concept-modal-assets.php'; ?>
+	<?php include 'includes/email-modal-assets.php'; ?>
 </head>
 
 <body>
