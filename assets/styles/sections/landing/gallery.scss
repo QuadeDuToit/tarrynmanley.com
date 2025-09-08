@@ -94,6 +94,12 @@
 }
 
 @media (max-width: 576px) {
+
+	h2 {
+		font-size: 34px;
+		text-align: center;
+	}
+
 	#gallery .gallery-card img.img {
 		max-width: 200px;
 		width: 100%;
@@ -101,6 +107,11 @@
 }
 
 @media (min-width: 576px) {
+	h2 {
+		font-size: 34px;
+		text-align: center;
+	}
+
 	#gallery .gallery-card img.img {
 		width: 200px;
 	}
