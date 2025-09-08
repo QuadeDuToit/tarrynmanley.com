@@ -46,7 +46,7 @@
 
 	<section id="gallery" class="container">
 		<div class="row">
-			<div class="col-5">
+			<div class="col-12">
 				<h2 class="clr-primary text-shadow text-center">
 					GALLERY
 				</h2>
