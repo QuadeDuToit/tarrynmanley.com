@@ -36,6 +36,7 @@ if ($artwork) {
 
 <head>
 	<?php include 'includes/head.php'; ?>
+	<?php include 'includes/concept-modal-assets.php'; ?>
 
 	<style>
 		html,
@@ -132,6 +133,7 @@ if ($artwork) {
 			margin-bottom: 40px;
 		}
 	</style>
+	<?php include 'includes/concept-modal-assets.php'; ?>
 </head>
 
 <body>
@@ -168,7 +170,7 @@ if ($artwork) {
 					</p>
 					<hr />
 					<p>
-						Concept: <?php echo htmlspecialchars($artwork['concept']); ?>
+						Concept: <?php echo GalleryHelper::createConceptDisplay($artwork['title'] ?? 'Artwork', $artwork['concept'] ?? ''); ?>
 					</p>
 					<hr />
 					<p>
@@ -178,23 +180,23 @@ if ($artwork) {
 			</div>
 		</section>
 
-		<div class="row related-artworks">
-			<div class="col-12">
-				<h2 class="clr-primary text-shadow text-center">
-					MORE ARTWORKS
-				</h2>
+		<section id="gallery" class="container">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="clr-primary text-shadow text-center">
+						MORE ARTWORKS
+					</h2>
+				</div>
 			</div>
-		</div>
-
-		<div id="galleryFeatured" class="row">
-			<?php
-			// Show 3 featured artworks as "related"
-			$featured_items = GalleryHelper::getFeaturedItems(3);
-			foreach ($featured_items as $featured_item) {
-				echo GalleryHelper::renderGalleryCard($featured_item, true);
-			}
-			?>
-		</div>
+			<div class="row">
+				<?php
+				// Show 3 random artworks excluding the current one
+				$random_items = GalleryHelper::getRandomItems(3, $artwork_id);
+				foreach ($random_items as $random_item) {
+					echo GalleryHelper::renderGalleryCard($random_item, true);
+				}
+				?>
+			</div>
 		</section>
 
 	<?php else: ?>

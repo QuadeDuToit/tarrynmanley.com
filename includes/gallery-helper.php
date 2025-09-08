@@ -53,6 +53,34 @@ class GalleryHelper
 	}
 
 	/**
+	 * Get random gallery items (excluding a specific item if provided)
+	 */
+	public static function getRandomItems($limit = 3, $excludeIdentifier = null)
+	{
+		$all_items = self::loadGalleryData();
+
+		// Remove the excluded item if specified
+		if ($excludeIdentifier) {
+			$all_items = array_filter($all_items, function ($item) use ($excludeIdentifier) {
+				if (isset($item['fileName'])) {
+					$fileNameWithoutExt = pathinfo($item['fileName'], PATHINFO_FILENAME);
+					if ($fileNameWithoutExt === $excludeIdentifier) {
+						return false;
+					}
+				}
+				if (isset($item['title']) && self::createSlug($item['title']) === self::createSlug($excludeIdentifier)) {
+					return false;
+				}
+				return true;
+			});
+		}
+
+		// Shuffle the array and return the requested number of items
+		shuffle($all_items);
+		return array_slice($all_items, 0, $limit);
+	}
+
+	/**
 	 * Get a specific artwork by filename or title
 	 */
 	public static function getArtworkByIdentifier($identifier)
@@ -120,9 +148,12 @@ class GalleryHelper
 		$title = htmlspecialchars($item['title'] ?? 'Untitled');
 		$fileName = htmlspecialchars($item['fileName'] ?? 'placeholder.webp');
 		$dimensions = htmlspecialchars($item['dimensions'] ?? 'N/A');
-		$concept = htmlspecialchars($item['concept'] ?? 'N/A');
+		$concept = $item['concept'] ?? 'N/A';
 		$year = htmlspecialchars($item['year'] ?? 'N/A');
 		$artworkUrl = $linkToDetail ? self::getArtworkUrl($item) : '#';
+
+		// Create concept display with modal functionality
+		$conceptDisplay = self::createConceptDisplay($title, $concept);
 
 		$cardContent = '
             <div class="img">
@@ -132,7 +163,7 @@ class GalleryHelper
             <hr />
             <p>Dimensions: ' . $dimensions . '</p>
             <hr />
-            <p>Concept: ' . $concept . '</p>
+            <p>Concept: ' . $conceptDisplay . '</p>
             <hr />
             <p>Year: ' . $year . '</p>';
 
@@ -149,6 +180,35 @@ class GalleryHelper
             ' . $cardContent . '
         </div>';
 		}
+	}
+
+	/**
+	 * Create concept display with modal functionality
+	 */
+	public static function createConceptDisplay($title, $concept, $truncateLength = 100)
+	{
+		if (!$concept || trim($concept) === '' || $concept === 'N/A') {
+			return 'No concept available';
+		}
+
+		$shouldTruncate = strlen($concept) > $truncateLength;
+		$truncated = $shouldTruncate ? substr($concept, 0, $truncateLength) . '...' : $concept;
+
+		// Escape for JavaScript - encode as JSON to handle quotes and newlines properly
+		$titleEscaped = json_encode($title);
+		$conceptEscaped = json_encode($concept);
+
+		$displayHtml = '<span class="concept-preview">' . htmlspecialchars($truncated) . '</span>';
+
+		if ($shouldTruncate) {
+			$displayHtml .= ' <button class="read-more-btn" onclick="event.preventDefault(); event.stopPropagation(); conceptModal.open(' .
+				$titleEscaped . ', ' .
+				$conceptEscaped . ')">
+				<span>Read More</span> <i class="arrow-icon">→</i>
+			</button>';
+		}
+
+		return $displayHtml;
 	}
 
 	/**

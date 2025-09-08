@@ -3,6 +3,7 @@
 
 <head>
 	<?php include 'includes/head.php'; ?>
+	<?php include 'includes/concept-modal-assets.php'; ?>
 
 	<!-- Structured Data for SEO -->
 	<script type="application/ld+json">

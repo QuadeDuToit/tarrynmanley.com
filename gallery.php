@@ -11,6 +11,7 @@ $canonical_url = 'https://tarrynmanley.com/gallery.php';
 
 <head>
 	<?php include 'includes/head.php'; ?>
+	<?php include 'includes/concept-modal-assets.php'; ?>
 </head>
 
 <body>
