@@ -59,12 +59,12 @@
 		<div class="row section-portrait">
 			<div class="col-6">
 				<div class="portrait-lg">
-					<img src="./assets/images/gallery/lg/blue_lady.webp" />
+					<img src="./assets/images/gallery/lg/blue_lady.webp" alt="Blue Lady" />
 				</div>
 			</div>
 			<div class="col-4 offset-1 gallery-card">
 				<div class="portrait">
-					<img src="./assets/images/gallery/blue_lady.webp" />
+					<img src="./assets/images/gallery/blue_lady.webp" alt="Blue Lady Large" />
 				</div>
 				<p class="title"><?php echo htmlspecialchars($artwork['title'] ?? 'Untitled'); ?></p>
 				<hr />
