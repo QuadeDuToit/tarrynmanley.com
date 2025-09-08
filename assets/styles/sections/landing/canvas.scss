@@ -1,11 +1,12 @@
 #my-canvas {
-	padding: 25px 0 60px 60px;
+
 
 	.img-video {
 		align-items: center;
 		background-image: url('https://placehold.co/420x540/000000/FFF');
 		display: flex;
 		height: 540px;
+		justify-content: center;
 		justify-content: center;
 		margin-left: -40px;
 		overflow: hidden;
@@ -31,6 +32,14 @@
 	}
 
 
+	@media (max-width: 576px) {
+		padding: 25px 0 60px 0px;
+
+		.img-video {
+			margin-left: 0;
+		}
+	}
+
 	@media (min-width: 576px) {
 		padding: 25px;
 
@@ -53,6 +62,8 @@
 	}
 
 	@media (min-width: 768px) {
+		padding: 25px 0 60px 60px;
+
 		.col-img-video {
 			display: flex;
 			justify-content: center;
@@ -79,4 +90,9 @@
 
 	@media (min-width: 1200px) {}
 
+}
+
+video {
+	display: block;
+	position: relative;
 }

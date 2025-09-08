@@ -1,7 +1,7 @@
 <section id="my-canvas" class="container">
 	<div class="row">
 		<div class="col-12 col-lg-7 p-40 col-sm-12 text-center">
-			<h2 class="clr-primary text-shadow  text-center mt-20">
+			<h2 class="clr-primary text-shadow text-center mt-20">
 				MY CANVAS
 			</h2>
 			<h3 class="clr-primary text-shadow text-center my-20">
@@ -23,8 +23,8 @@
 				viewer.
 			</p>
 		</div>
-		<div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-5 flex flex-x">
-			<div class="img-video">
+		<div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-5 flex flex-x ">
+			<div class="img-video flex flex-x">
 				<video
 					class="lazy-video"
 					kind="A sped up video of Tarryn Manley painting"
