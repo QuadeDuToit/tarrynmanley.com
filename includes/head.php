@@ -8,9 +8,19 @@ $canonical_url = $canonical_url ?? 'https://tarrynmanley.com/' . basename($_SERV
 ?>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="<?php echo htmlspecialchars($page_description); ?>">
-<meta name="keywords" content="<?php echo htmlspecialchars($page_keywords); ?>">
+<!-- Viewport disabled for testing - prevents responsive breakpoints -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<style>
+	/* Force 1200px width for testing purposes */
+	body,
+	html {
+		min-width: 1200px !important;
+		width: 1200px !important;
+		margin: 0 auto !important;
+	}
+</style>
+<meta name="description" content="<?php echo htmlspecialchars($page_description); ?>"
+	<meta name="keywords" content="<?php echo htmlspecialchars($page_keywords); ?>">
 <meta name="author" content="Tarryn Manley">
 <meta name="robots" content="index,follow">
 <title><?php echo htmlspecialchars($page_title); ?></title>
