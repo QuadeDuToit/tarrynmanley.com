@@ -1,6 +1,6 @@
 <section id="my-canvas" class="container">
 	<div class="row">
-		<div class="col-7 col-lg-7 p-40 col-sm-12">
+		<div class="col-12 col-lg-7 p-40 col-sm-12 text-center">
 			<h2 class="clr-primary text-shadow  text-center mt-20">
 				MY CANVAS
 			</h2>
@@ -8,9 +8,7 @@
 				Everything is emotion,to have<br />someone else feel the same<br />as I do is a tiny miracle.
 			</h3>
 			<div class="col-sm-show col-img-video">
-				<div class="img-video">
 
-				</div>
 			</div>
 			<p class="mt-30">
 				While I'm practiced in different<br class="hide-lg" />mediums, I found a deep connection<br
@@ -25,7 +23,7 @@
 				viewer.
 			</p>
 		</div>
-		<div class="col-5 col-sm-hide">
+		<div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-5 flex flex-x">
 			<div class="img-video">
 				<video
 					class="lazy-video"

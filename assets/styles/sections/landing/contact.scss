@@ -49,4 +49,112 @@
 	}
 
 
+	@media (max-width: 576px) {
+		h2 {
+			text-align: center;
+		}
+
+		.contact-details {
+			position: relative;
+			text-align: center;
+		}
+
+
+		.img-bg {
+			left: 0;
+			margin: auto;
+			position: relative;
+			right: 0;
+			width: 100%;
+		}
+
+		.img-splash {
+			left: 0;
+			margin: auto;
+			right: 0;
+			width: unset;
+		}
+	}
+
+	@media (min-width: 576px) {
+		h2 {
+			text-align: center;
+		}
+
+		.contact-details {
+			position: relative;
+			text-align: center;
+		}
+
+		.img-bg {
+			left: 0;
+			margin: auto;
+			position: relative;
+			right: 0;
+			width: 100%;
+		}
+
+		.img-splash {
+			left: 0;
+			margin: auto;
+			right: 0;
+			width: unset;
+		}
+
+	}
+
+	@media (min-width: 768px) {
+		h2 {
+			text-align: center;
+		}
+
+		.img-bg {
+			left: 0;
+			right: 0;
+		}
+
+		.img-splash {
+			left: 0;
+			right: 0;
+		}
+
+
+		.contact-details {
+			position: relative;
+			text-align: center;
+		}
+	}
+
+	@media (min-width: 992px) {
+		h2 {
+			text-align: left;
+		}
+
+		.contact-details {
+			position: absolute;
+			text-align: left;
+		}
+
+		.img-bg {
+			left: unset;
+			margin-left: auto;
+			margin-right: 0;
+			right: unset;
+			width: 345px;
+
+		}
+
+		.img-splash {
+			left: unset;
+			margin-left: auto;
+			right: 280px;
+			right: unset;
+			width: 305px;
+		}
+
+	}
+
+	@media (min-width: 1200px) {}
+
+
 }

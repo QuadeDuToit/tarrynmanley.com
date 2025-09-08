@@ -172,7 +172,7 @@ class GalleryHelper
 
 		if ($linkToDetail) {
 			return '
-        <div class="col-4 gallery-card">
+        <div class="col-12 col-md-4 gallery-card">
             <a href="' . $artworkUrl . '" style="text-decoration: none; color: inherit;">
                 ' . $cardContent . '
             </a>

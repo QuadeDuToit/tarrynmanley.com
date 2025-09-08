@@ -38,101 +38,6 @@ if ($artwork) {
 	<?php include 'includes/head.php'; ?>
 	<?php include 'includes/concept-modal-assets.php'; ?>
 
-	<style>
-		html,
-		body {
-			width: 1200px;
-			margin: 0 auto;
-		}
-
-		.artwork-detail {
-			padding: 40px 0;
-		}
-
-		.artwork-image {
-			text-align: center;
-			margin-bottom: 40px;
-		}
-
-		.artwork-image img {
-			max-width: 100%;
-			max-height: 70vh;
-			object-fit: contain;
-			border-radius: 8px;
-			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-		}
-
-		.artwork-info {
-			background: rgba(255, 255, 255, 0.1);
-			backdrop-filter: blur(10px);
-			border-radius: 15px;
-			padding: 30px;
-			margin: 20px 0;
-		}
-
-		.artwork-info h1 {
-			color: #fbff00;
-			font-size: 48px;
-			text-align: center;
-			margin-bottom: 30px;
-			text-transform: uppercase;
-		}
-
-		.artwork-details {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-			gap: 20px;
-			margin-top: 20px;
-		}
-
-		.detail-item {
-			background: rgba(0, 0, 0, 0.1);
-			padding: 15px;
-			border-radius: 8px;
-		}
-
-		.detail-item h3 {
-			color: #fbff00;
-			margin-bottom: 10px;
-			text-transform: uppercase;
-		}
-
-		.detail-item p {
-			color: #fff;
-			margin: 0;
-		}
-
-		.back-to-gallery {
-			text-align: center;
-			margin: 40px 0;
-		}
-
-		.back-to-gallery a {
-			background: #fbff00;
-			color: #000;
-			padding: 15px 30px;
-			text-decoration: none;
-			border-radius: 8px;
-			font-weight: bold;
-			text-transform: uppercase;
-			transition: all 0.3s ease;
-		}
-
-		.back-to-gallery a:hover {
-			background: #eb1d36;
-			color: #fff;
-		}
-
-		.related-artworks {
-			margin-top: 60px;
-		}
-
-		.related-artworks h2 {
-			color: #fbff00;
-			text-align: center;
-			margin-bottom: 40px;
-		}
-	</style>
 	<?php include 'includes/concept-modal-assets.php'; ?>
 </head>
 
@@ -154,31 +59,35 @@ if ($artwork) {
 			</div>
 
 			<div class="row section-portrait">
-				<div class="col-6">
-					<div class="portrait-lg">
-						<img src="./assets/images/gallery/lg/<?php echo htmlspecialchars($artwork['fileName']); ?>" />
+				<div class="col-12 col-md-12 col-lg-6">
+					<div class="portrait-lg ">
+						<img id="img-lg" src="./assets/images/gallery/lg/<?php echo htmlspecialchars($artwork['fileName']); ?>" />
 					</div>
 				</div>
-				<div class="col-4 offset-1 gallery-card">
-					<div class="portrait">
-						<img src="./assets/images/gallery/<?php echo htmlspecialchars($artwork['fileName']); ?>" />
+				<div class="col-md-12 col-lg-6 gallery-card">
+					<div class="row">
+						<div class="portrait col-6 col-md-6 col-lg-12 offset-lg-1">
+							<img class="img" id="img-protrait" src="./assets/images/gallery/<?php echo htmlspecialchars($artwork['fileName']); ?>" />
+						</div>
+						<div class="col-6 col-md-5 col-lg-10 offset-lg-1">
+							<p class="title"><?php echo htmlspecialchars($artwork['title'] ?? 'Untitled'); ?></p>
+							<hr />
+							<p>
+								Dimensions: <?php echo htmlspecialchars($artwork['dimensions'] ?? 'N/A'); ?>
+							</p>
+							<hr />
+							<p>
+								Concept: <?php
+											$artworkId = isset($artwork['fileName']) ? pathinfo($artwork['fileName'], PATHINFO_FILENAME) : GalleryHelper::createSlug($artwork['title'] ?? 'Artwork');
+											echo GalleryHelper::createConceptDisplay($artwork['title'] ?? 'Artwork', $artwork['concept'] ?? '', 100, $artworkId);
+											?>
+							</p>
+							<hr />
+							<p>
+								Year: <?php echo htmlspecialchars($artwork['year'] ?? 'N/A'); ?>
+							</p>
+						</div>
 					</div>
-					<p class="title"><?php echo htmlspecialchars($artwork['title'] ?? 'Untitled'); ?></p>
-					<hr />
-					<p>
-						Dimensions: <?php echo htmlspecialchars($artwork['dimensions'] ?? 'N/A'); ?>
-					</p>
-					<hr />
-					<p>
-						Concept: <?php
-									$artworkId = isset($artwork['fileName']) ? pathinfo($artwork['fileName'], PATHINFO_FILENAME) : GalleryHelper::createSlug($artwork['title'] ?? 'Artwork');
-									echo GalleryHelper::createConceptDisplay($artwork['title'] ?? 'Artwork', $artwork['concept'] ?? '', 100, $artworkId);
-									?>
-					</p>
-					<hr />
-					<p>
-						Year: <?php echo htmlspecialchars($artwork['year'] ?? 'N/A'); ?>
-					</p>
 				</div>
 			</div>
 		</section>

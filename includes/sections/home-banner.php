@@ -1,7 +1,7 @@
 <section id="home-banner" class="container">
 	<!-- home banner -->
 	<header class="row flex header">
-		<div class="col-8 offset-2 text-right">
+		<div class="offset-2 offset-lg-0 col-lg-12 col-sm-12 col-10 offset-sm-0 text-right">
 			<h1 class="clr-primary text-shadow ">
 				TARRYN MANLEY
 			</h1>
@@ -11,11 +11,11 @@
 		</div>
 	</header>
 	<div class="row">
-		<div class="col-2 img-self-portait">
+		<div class="col-12 col-xs-12 col-sm-12 col-md-2 img-self-portait text-center">
 			<img src="./assets/images/profile.webp" alt="Photo of Tarryn Manley" fetchpriority="high" />
 		</div>
-		<div class="col-10 py-15 pr-30 pl-30">
-			<p class="mb-30">
+		<div class="col-12 col-xs-12 col-sm-12 col-md-10 py-15 pr-30 intro-blurb">
+			<p class="mb-30 custom-blurb">
 				From the moment I could hold a crayon, art has been my steadfast companion. What started as a
 				childhood fascination quickly
 				blossomed into an enduring love affair, a constant urge to create and explore. Even then, I knew my
@@ -23,7 +23,7 @@
 				the vibrant world of colors and forms.
 			</p>
 
-			<p class="mb-30">
+			<p class="mb-30 custom-blurb">
 				Art became more than just a passion during a challenging period in my life; it was a beacon, guiding
 				me through darkness and
 				helping me find my voice. Now, it brings me immeasurable joy, a feeling I pour into every
@@ -33,7 +33,7 @@
 				speak directly from the heart.
 			</p>
 
-			<p class="mb-30">
+			<p class="mb-30 custom-blurb-1">
 				My studio is a playground where I push boundaries and embrace the unexpected. I constantly challenge
 				myself to try new things,
 				finding beauty in the process of learning and celebrating every "happy mistake" that leads to an
@@ -43,7 +43,7 @@
 				and pencil on canvas. Each piece is a unique expression, capturing an essence of emotion and energy.
 			</p>
 
-			<p class="mb-30">
+			<p class="mb-30 custom-blurb-1">
 				What truly excites me about art is its power to transcend boundaries, inviting you to see and feel
 				something uniquely personal.
 				My pieces are deeply influenced by the lush intricacies of nature, the mysteries of the cosmos, and

@@ -60,6 +60,8 @@
 			width: 200px;
 		}
 
+
+
 		hr {
 			color: rgb(250, 250, 250);
 			margin: 10px 0
@@ -79,7 +81,7 @@
 		.portrait {
 			background-position: center;
 			background-size: cover;
-			height: 390px;
+			// height: 390px;
 			margin-top: 20px;
 
 		}
@@ -88,5 +90,37 @@
 			padding: 20px 0 0 0;
 
 		}
+	}
+}
+
+@media (max-width: 576px) {
+	#gallery .gallery-card img.img {
+		max-width: 200px;
+		width: 100%;
+	}
+}
+
+@media (min-width: 576px) {
+	#gallery .gallery-card img.img {
+		width: 200px;
+	}
+}
+
+@media (min-width: 768px) {
+	#gallery .gallery-card img.img {
+		width: 300px;
+	}
+}
+
+
+@media (min-width: 992px) {
+	#gallery .gallery-card img.img {
+		width: 200px;
+	}
+}
+
+@media (min-width: 1200px) {
+	#gallery .gallery-card img.img {
+		width: 200px;
 	}
 }

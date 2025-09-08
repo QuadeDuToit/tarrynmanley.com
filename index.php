@@ -57,31 +57,35 @@
 		$artwork = GalleryHelper::getArtworkByIdentifier($artwork_id);
 		?>
 		<div class="row section-portrait">
-			<div class="col-6">
+			<div class="col-12 col-md-12 col-lg-6">
 				<div class="portrait-lg">
-					<img src="./assets/images/gallery/lg/blue_lady.webp" alt="Blue Lady" />
+					<img id="img-lg" src="./assets/images/gallery/lg/blue_lady.webp" alt="Blue Lady" />
 				</div>
 			</div>
-			<div class="col-4 offset-1 gallery-card">
-				<div class="portrait">
-					<img src="./assets/images/gallery/blue_lady.webp" alt="Blue Lady Large" />
+			<div class="col-md-12 col-lg-6 gallery-card">
+				<div class="row">
+					<div class="portrait col-6 col-md-6 col-lg-12 offset-lg-1">
+						<img class="img" src="./assets/images/gallery/blue_lady.webp" alt="Blue Lady Large" />
+					</div>
+					<div class="col-6 col-md-5 col-lg-10 offset-lg-1">
+						<p class="title"><?php echo htmlspecialchars($artwork['title'] ?? 'Untitled'); ?></p>
+						<hr />
+						<p>
+							Dimensions: <?php echo htmlspecialchars($artwork['dimensions'] ?? 'N/A'); ?>
+						</p>
+						<hr />
+						<p>
+							Concept: <?php
+										$artworkId = isset($artwork['fileName']) ? pathinfo($artwork['fileName'], PATHINFO_FILENAME) : GalleryHelper::createSlug($artwork['title'] ?? 'Artwork');
+										echo GalleryHelper::createConceptDisplay($artwork['title'] ?? 'Artwork', $artwork['concept'] ?? '', 100, $artworkId);
+										?>
+						</p>
+						<hr />
+						<p>
+							Year: <?php echo htmlspecialchars($artwork['year'] ?? 'N/A'); ?>
+						</p>
+					</div>
 				</div>
-				<p class="title"><?php echo htmlspecialchars($artwork['title'] ?? 'Untitled'); ?></p>
-				<hr />
-				<p>
-					Dimensions: <?php echo htmlspecialchars($artwork['dimensions'] ?? 'N/A'); ?>
-				</p>
-				<hr />
-				<p>
-					Concept: <?php
-								$artworkId = isset($artwork['fileName']) ? pathinfo($artwork['fileName'], PATHINFO_FILENAME) : GalleryHelper::createSlug($artwork['title'] ?? 'Artwork');
-								echo GalleryHelper::createConceptDisplay($artwork['title'] ?? 'Artwork', $artwork['concept'] ?? '', 100, $artworkId);
-								?>
-				</p>
-				<hr />
-				<p>
-					Year: <?php echo htmlspecialchars($artwork['year'] ?? 'N/A'); ?>
-				</p>
 			</div>
 		</div>
 	</section>

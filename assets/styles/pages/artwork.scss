@@ -1,0 +1,128 @@
+.artwork-detail {
+	padding: 40px 0;
+}
+
+.artwork-image {
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.artwork-image img {
+	border-radius: 8px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	max-height: 70vh;
+	max-width: 100%;
+	object-fit: contain;
+}
+
+.artwork-info {
+	backdrop-filter: blur(10px);
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 15px;
+	margin: 20px 0;
+	padding: 30px;
+}
+
+.artwork-info h1 {
+	color: #fbff00;
+	font-size: 48px;
+	margin-bottom: 30px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.artwork-details {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	margin-top: 20px;
+}
+
+.detail-item {
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	padding: 15px;
+}
+
+.detail-item h3 {
+	color: #fbff00;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.detail-item p {
+	color: #fff;
+	margin: 0;
+}
+
+.back-to-gallery {
+	margin: 40px 0;
+	text-align: center;
+}
+
+.back-to-gallery a {
+	background: #fbff00;
+	border-radius: 8px;
+	color: #000;
+	font-weight: bold;
+	padding: 15px 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+}
+
+.back-to-gallery a:hover {
+	background: #eb1d36;
+	color: #fff;
+}
+
+.related-artworks {
+	margin-top: 60px;
+}
+
+.related-artworks h2 {
+	color: #fbff00;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+// Image scaling - gets smaller as screen size decreases
+#img-lg {
+	max-width: 600px; // Maximum size limit
+	width: 100%; // Default: full width on small screens
+}
+
+@media (min-width: 576px) {
+	#img-lg {
+		max-width: 480px;
+	}
+
+	#img-portrait {
+		max-width: 100px;
+	}
+}
+
+@media (min-width: 768px) {
+	#img-lg {
+		max-width: 520px;
+	}
+
+	.portrait-lg {
+		display: flex;
+		justify-content: center;
+		padding-bottom: 40px;
+	}
+
+}
+
+@media (min-width: 992px) {
+	#img-lg {
+		max-width: 580px;
+	}
+}
+
+@media (min-width: 1200px) {
+	#img-lg {
+		max-width: 600px; // Largest size on big screens
+	}
+}
