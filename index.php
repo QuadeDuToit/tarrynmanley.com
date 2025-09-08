@@ -52,7 +52,10 @@
 				</h2>
 			</div>
 		</div>
-
+		<?php
+		$artwork_id = 'blue_lady';
+		$artwork = GalleryHelper::getArtworkByIdentifier($artwork_id);
+		?>
 		<div class="row section-portrait">
 			<div class="col-6">
 				<div class="portrait-lg">
@@ -63,18 +66,21 @@
 				<div class="portrait">
 					<img src="./assets/images/gallery/blue_lady.webp" />
 				</div>
-				<p class="title">a</p>
+				<p class="title"><?php echo htmlspecialchars($artwork['title'] ?? 'Untitled'); ?></p>
 				<hr />
 				<p>
-					Dimensions: b
+					Dimensions: <?php echo htmlspecialchars($artwork['dimensions'] ?? 'N/A'); ?>
 				</p>
 				<hr />
 				<p>
-					Concept: c
+					Concept: <?php
+								$artworkId = isset($artwork['fileName']) ? pathinfo($artwork['fileName'], PATHINFO_FILENAME) : GalleryHelper::createSlug($artwork['title'] ?? 'Artwork');
+								echo GalleryHelper::createConceptDisplay($artwork['title'] ?? 'Artwork', $artwork['concept'] ?? '', 100, $artworkId);
+								?>
 				</p>
 				<hr />
 				<p>
-					Year: d
+					Year: <?php echo htmlspecialchars($artwork['year'] ?? 'N/A'); ?>
 				</p>
 			</div>
 		</div>

@@ -152,8 +152,11 @@ class GalleryHelper
 		$year = htmlspecialchars($item['year'] ?? 'N/A');
 		$artworkUrl = $linkToDetail ? self::getArtworkUrl($item) : '#';
 
+		// Create artwork ID for modal lookup
+		$artworkId = isset($item['fileName']) ? pathinfo($item['fileName'], PATHINFO_FILENAME) : self::createSlug($title);
+
 		// Create concept display with modal functionality
-		$conceptDisplay = self::createConceptDisplay($title, $concept);
+		$conceptDisplay = self::createConceptDisplay($title, $concept, 100, $artworkId);
 
 		$cardContent = '
             <div class="img">
@@ -185,7 +188,7 @@ class GalleryHelper
 	/**
 	 * Create concept display with modal functionality
 	 */
-	public static function createConceptDisplay($title, $concept, $truncateLength = 100)
+	public static function createConceptDisplay($title, $concept, $truncateLength = 100, $artworkId = null)
 	{
 		if (!$concept || trim($concept) === '' || $concept === 'N/A') {
 			return 'No concept available';
@@ -194,16 +197,11 @@ class GalleryHelper
 		$shouldTruncate = strlen($concept) > $truncateLength;
 		$truncated = $shouldTruncate ? substr($concept, 0, $truncateLength) . '...' : $concept;
 
-		// Escape for JavaScript - encode as JSON to handle quotes and newlines properly
-		$titleEscaped = json_encode($title);
-		$conceptEscaped = json_encode($concept);
-
 		$displayHtml = '<span class="concept-preview">' . htmlspecialchars($truncated) . '</span>';
 
-		if ($shouldTruncate) {
-			$displayHtml .= ' <button class="read-more-btn" onclick="event.preventDefault(); event.stopPropagation(); conceptModal.open(' .
-				$titleEscaped . ', ' .
-				$conceptEscaped . ')">
+		if ($shouldTruncate && $artworkId) {
+			$displayHtml .= ' <button class="read-more-btn" onclick="event.preventDefault(); event.stopPropagation(); showConceptModalById(\'' .
+				htmlspecialchars($artworkId) . '\')">
 				<span>Read More</span> <i class="arrow-icon">→</i>
 			</button>';
 		}

@@ -170,7 +170,10 @@ if ($artwork) {
 					</p>
 					<hr />
 					<p>
-						Concept: <?php echo GalleryHelper::createConceptDisplay($artwork['title'] ?? 'Artwork', $artwork['concept'] ?? ''); ?>
+						Concept: <?php
+									$artworkId = isset($artwork['fileName']) ? pathinfo($artwork['fileName'], PATHINFO_FILENAME) : GalleryHelper::createSlug($artwork['title'] ?? 'Artwork');
+									echo GalleryHelper::createConceptDisplay($artwork['title'] ?? 'Artwork', $artwork['concept'] ?? '', 100, $artworkId);
+									?>
 					</p>
 					<hr />
 					<p>
